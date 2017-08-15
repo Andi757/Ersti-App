@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/aufgaben_offen"
             android:icon="@drawable/control_list"
             android:title="Aufgaben" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/aufgaben_erledigt"
             android:icon="@drawable/done_list"
             android:title="Erledigt" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/qr_code"
             android:icon="@drawable/qr_code"
             android:title="QR-Code Scanner" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/einstellungen"
             android:icon="@drawable/ic_menu_manage"
             android:title="Einstellungen" />
     </group>
-
     <item android:title="Veranstaltungen">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/veranstaltung1"
                 android:icon="@drawable/champaign"
                 android:title="Ersti-Party" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/veranstaltung2"
                 android:icon="@drawable/champaign"
                 android:title="Kneipentour" />
         </menu>
     </item>
-
 </menu>

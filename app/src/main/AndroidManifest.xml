@@ -17,17 +17,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ScannerActivity" />
         <activity
-            android:name=".ScannerActivity">
-        </activity>
-
+            android:name=".OpenTasksActivity"
+            android:label="@string/title_activity_open_tasks"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DoneTasksActivity"
+            android:label="@string/title_activity_done_tasks"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
