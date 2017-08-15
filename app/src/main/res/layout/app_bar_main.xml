@@ -30,4 +30,6 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/qr_code" />
 
+
+
 </android.support.design.widget.CoordinatorLayout>
