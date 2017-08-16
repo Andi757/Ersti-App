@@ -7,8 +7,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class DoneTasksActivity extends AppCompatActivity {
 
@@ -31,6 +33,16 @@ public class DoneTasksActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.donetasks_list_view,R.id.textView, donetasks);
         simpleList.setAdapter(adapter);
+
+        simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                int itemposition = position;
+
+                String value =(String) simpleList.getItemAtPosition(position);
+                Toast.makeText(DoneTasksActivity.this,""+value,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
