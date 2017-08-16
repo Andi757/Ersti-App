@@ -99,6 +99,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.einstellungen) {
             Intent einstellungen = new Intent(this, SettingsActivity.class);
             startActivity(einstellungen);
+        } else if (id == R.id.qr_code) {
+            Intent qr_code = new Intent(this, ScannerActivity.class);
+            startActivity(qr_code);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

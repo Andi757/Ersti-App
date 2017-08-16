@@ -1,5 +1,6 @@
 package de.hsos.ersti_app;
 
+import android.content.Intent;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -34,6 +35,15 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         super.onPause();
         mScannerView.stopCamera();
     }
+
+    @Override
+    public void onBackPressed() {
+
+        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void handleResult(Result result){

@@ -8,4 +8,11 @@
     tools:context="de.hsos.ersti_app.DoneTasksActivity"
     tools:showIn="@layout/activity_done_tasks">
 
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#000"
+        android:dividerHeight="2dp"/>
+
 </android.support.constraint.ConstraintLayout>
