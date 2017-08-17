@@ -20,15 +20,12 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scanner);
-    }
-
-    public void onClick(View v){
         mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);
         mScannerView.startCamera();
     }
+
 
     @Override
     protected void onPause() {
@@ -36,16 +33,13 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         mScannerView.stopCamera();
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 
     @Override
     public void handleResult(Result result){
         //Do anything with the Result here --------------------------------------------------->
+
+
+
         Log.v("handleResult", result.getText());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Scan Ergebnis");

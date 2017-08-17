@@ -37,11 +37,14 @@ public class MainActivity extends AppCompatActivity
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Scanning fab-Button
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                onClickQR();
+                //onClickQR();
+                Intent intent = new Intent(v.getContext(), ScannerActivity.class);
+                startActivity(intent);
             }
         });
 
