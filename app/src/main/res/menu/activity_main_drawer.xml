@@ -10,10 +10,15 @@
             android:icon="@drawable/done_list"
             android:title="Erledigt" />
         <item
+            android:id="@+id/apps"
+            android:icon="@drawable/playstore"
+            android:title="nützliche Apps"/>
+        <item
             android:id="@+id/einstellungen"
             android:icon="@drawable/ic_menu_manage"
             android:title="Einstellungen" />
     </group>
+
     <item android:title="Veranstaltungen">
         <menu>
             <item

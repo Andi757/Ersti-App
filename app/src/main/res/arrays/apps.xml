@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="app_names">
+        <item>OSCA</item>
+        <item>Mensa Osnabrück</item>
+        <item>Campus Card Reader</item>
+        <item>HS OS Gebäudefinder</item>
+        <item>Netcase</item>
+    </string-array>
+
+    <string-array name="app_uris">
+        <item>https://play.google.com/store/apps/details?id=de.datenlotsen.campusnet.hsos</item>
+        <item>https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck</item>
+        <item>https://play.google.com/store/apps/details?id=de.lazyheroproductions.campuscardreader</item>
+        <item>https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder</item>
+        <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
+    </string-array>
+</resources>
