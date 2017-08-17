@@ -93,15 +93,19 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.aufgaben_offen) {
             Intent aufgaben_offen = new Intent(this, OpenTasksActivity.class);
             startActivity(aufgaben_offen);
+            finish();
         } else if (id == R.id.aufgaben_erledigt) {
             Intent aufgaben_erledigt = new Intent(this, DoneTasksActivity.class);
             startActivity(aufgaben_erledigt);
+            finish();
         } else if (id == R.id.einstellungen) {
             Intent einstellungen = new Intent(this, SettingsActivity.class);
             startActivity(einstellungen);
+            finish();
         } else if (id == R.id.qr_code) {
             Intent qr_code = new Intent(this, ScannerActivity.class);
             startActivity(qr_code);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -130,6 +134,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
-        mScannerView.stopCamera();
+//        mScannerView.stopCamera();                <--Die Zeile verurscht crash
     }
+
 }

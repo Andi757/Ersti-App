@@ -37,22 +37,35 @@ public class OpenTasksActivity extends AppCompatActivity{
         simpleList.setAdapter(adapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-            int itemposition = position;
 
-                String value =(String) simpleList.getItemAtPosition(position);
-                Toast.makeText(OpenTasksActivity.this,""+value,Toast.LENGTH_SHORT).show();
-            }
-        });
+                String value = (String) simpleList.getItemAtPosition(position);
+                Toast.makeText(OpenTasksActivity.this, "" + value, Toast.LENGTH_SHORT).show();
+
+                Intent intent = null;
+                switch (position) {
+                    case 1:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 2:
+                        intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                        startActivity(intent);
+                        finish();
+                }
+
+                /*Intent show_detail = new Intent(view.getContext(), ShowDetailActivity.class);
+                startActivity(show_detail);
+                finish();*/
+            }}
+        );
     }
 
     @Override
     public void onBackPressed() {
-
-        finish();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
-
 }

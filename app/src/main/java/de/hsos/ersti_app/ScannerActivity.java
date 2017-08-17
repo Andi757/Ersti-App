@@ -38,12 +38,10 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
     @Override
     public void onBackPressed() {
-
-        finish();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
-
 
     @Override
     public void handleResult(Result result){

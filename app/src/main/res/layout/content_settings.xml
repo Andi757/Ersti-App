@@ -8,4 +8,9 @@
     tools:context="de.hsos.ersti_app.SettingsActivity"
     tools:showIn="@layout/activity_settings">
 
+    <Button android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1"
+        android:text="Beenden" />
+
 </android.support.constraint.ConstraintLayout>

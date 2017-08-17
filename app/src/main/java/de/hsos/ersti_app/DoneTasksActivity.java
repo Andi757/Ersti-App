@@ -35,6 +35,9 @@ public class DoneTasksActivity extends AppCompatActivity {
         simpleList.setAdapter(adapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 int itemposition = position;
@@ -47,9 +50,8 @@ public class DoneTasksActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-        finish();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
