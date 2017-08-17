@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-/**
- * Created by Simon on 17.08.2017.
- */
+
 
 public class ShowDetailActivity extends AppCompatActivity {
 

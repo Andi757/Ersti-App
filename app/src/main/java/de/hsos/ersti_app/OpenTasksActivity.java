@@ -44,11 +44,11 @@ public class OpenTasksActivity extends AppCompatActivity{
 
                 Intent intent = null;
                 switch (position) {
-                    case 1:
+                    case 0:
                         intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                         startActivity(intent);
                         finish();
-                        break;
+                        //break;
                     case 2:
                         intent = new Intent(getApplicationContext(), SettingsActivity.class);
                         startActivity(intent);

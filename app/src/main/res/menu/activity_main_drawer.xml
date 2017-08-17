@@ -10,10 +10,6 @@
             android:icon="@drawable/done_list"
             android:title="Erledigt" />
         <item
-            android:id="@+id/qr_code"
-            android:icon="@drawable/qr_code"
-            android:title="QR-Code Scanner" />
-        <item
             android:id="@+id/einstellungen"
             android:icon="@drawable/ic_menu_manage"
             android:title="Einstellungen" />
@@ -21,9 +17,9 @@
     <item android:title="Veranstaltungen">
         <menu>
             <item
-                android:id="@+id/veranstaltung1"
+                android:id="@+id/nachtleben_os"
                 android:icon="@drawable/champaign"
-                android:title="Ersti-Party" />
+                android:title="Nachtleben-OS" />
             <item
                 android:id="@+id/veranstaltung2"
                 android:icon="@drawable/champaign"

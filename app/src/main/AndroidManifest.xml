@@ -3,6 +3,7 @@
     package="de.hsos.ersti_app">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -33,7 +34,10 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ShowDetailActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

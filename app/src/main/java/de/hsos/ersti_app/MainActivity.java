@@ -1,6 +1,7 @@
 package de.hsos.ersti_app;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -20,6 +21,8 @@ import android.view.MenuItem;
 
 import com.google.zxing.Result;
 
+import java.net.URL;
+
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class MainActivity extends AppCompatActivity
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                onClickQR(v);
+                onClickQR();
             }
         });
 
@@ -102,11 +105,12 @@ public class MainActivity extends AppCompatActivity
             Intent einstellungen = new Intent(this, SettingsActivity.class);
             startActivity(einstellungen);
             finish();
-        } else if (id == R.id.qr_code) {
-            Intent qr_code = new Intent(this, ScannerActivity.class);
-            startActivity(qr_code);
-            finish();
+        } else if (id == R.id.nachtleben_os) {
+            Uri uri = Uri.parse("http:www.nachtleben-os.de");
+            Intent www_nachtleben = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(www_nachtleben);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -124,7 +128,7 @@ public class MainActivity extends AppCompatActivity
         alertDialog.show();
     }
 
-    public void onClickQR(View v){
+    public void onClickQR(){
         mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);
