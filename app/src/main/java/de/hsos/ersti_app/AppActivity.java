@@ -2,9 +2,14 @@ package de.hsos.ersti_app;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Browser;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class AppActivity extends ListActivity {
@@ -15,13 +20,31 @@ public class AppActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
+        //TO BE DONE ---------------------------------------------------------------------->
+        ListView lv = (ListView) findViewById(R.id.list_view);
+
+
         Context ctx = getApplicationContext();
         Resources res = ctx.getResources();
 
-        String[] options = res.getStringArray(R.array.app_names);
+        String[] names = res.getStringArray(R.array.app_names);
         TypedArray icons = res.obtainTypedArray(R.array.app_icons);
+        final String[] uris = res.getStringArray(R.array.app_uris);
+        /*
+        //TO BE DONE ---------------------------------------------------------------------->
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String UriString = uris[position].toString();
+                Uri uri = Uri.parse(UriString);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(browserIntent);
+            }
+        });
+        */
 
-        setListAdapter(new ImageAndTextAdapter(ctx, R.layout.app_item, options, icons));
+        setListAdapter(new ImageAndTextAdapter(ctx, R.layout.app_item, names, icons, uris));
+
     }
 
 

@@ -3,6 +3,7 @@ package de.hsos.ersti_app;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,16 +21,18 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
 
     private String[] mStrings;
     private TypedArray mIcons;
+    private String[] mUris;
 
     private int mViewResourceId;
 
-    public ImageAndTextAdapter(Context ctx, int viewResourceId,String[] strings, TypedArray icons) {
-        super(ctx, viewResourceId, strings);
+    public ImageAndTextAdapter(Context ctx, int viewResourceId,String[] names, TypedArray icons, String[] uris) {
+        super(ctx, viewResourceId, names);
 
         mInflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        mStrings = strings;
+        mStrings = names;
         mIcons = icons;
+        mUris = uris;
 
         mViewResourceId = viewResourceId;
     }
@@ -58,6 +61,7 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
 
         TextView tv = (TextView)convertView.findViewById(R.id.option_text);
         tv.setText(mStrings[position]);
+        tv.setTextColor(Color.parseColor("#000000"));
 
         return convertView;
     }

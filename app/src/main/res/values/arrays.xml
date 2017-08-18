@@ -16,10 +16,10 @@
         <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
     </string-array>
     <array name="app_icons">
-        <item>@drawable/champaign</item>
-        <item>@drawable/playstore</item>
-        <item>@drawable/done_list</item>
-        <item>@drawable/qr_code</item>
-        <item>@drawable/calendar</item>
+        <item>@drawable/osca</item>
+        <item>@drawable/mensa</item>
+        <item>@drawable/campus_card</item>
+        <item>@drawable/hs_os</item>
+        <item>@drawable/netcase</item>
     </array>
 </resources>
