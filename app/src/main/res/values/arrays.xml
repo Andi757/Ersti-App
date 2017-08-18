@@ -15,4 +15,11 @@
         <item>https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder</item>
         <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
     </string-array>
+    <array name="app_icons">
+        <item>@drawable/champaign</item>
+        <item>@drawable/playstore</item>
+        <item>@drawable/done_list</item>
+        <item>@drawable/qr_code</item>
+        <item>@drawable/calendar</item>
+    </array>
 </resources>

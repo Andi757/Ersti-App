@@ -99,15 +99,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.aufgaben_offen) {
             Intent aufgaben_offen = new Intent(this, OpenTasksActivity.class);
             startActivity(aufgaben_offen);
-            finish();
         } else if (id == R.id.aufgaben_erledigt) {
             Intent aufgaben_erledigt = new Intent(this, DoneTasksActivity.class);
             startActivity(aufgaben_erledigt);
-            finish();
+        } else if (id == R.id.apps) {
+            Intent apps = new Intent(this, AppActivity.class);
+            startActivity(apps);
         } else if (id == R.id.einstellungen) {
             Intent einstellungen = new Intent(this, SettingsActivity.class);
             startActivity(einstellungen);
-            finish();
         } else if (id == R.id.nachtleben_os) {
             Uri uri = Uri.parse("http:www.nachtleben-os.de");
             Intent www_nachtleben = new Intent(Intent.ACTION_VIEW, uri);

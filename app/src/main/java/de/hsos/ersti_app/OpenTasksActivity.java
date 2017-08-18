@@ -53,6 +53,7 @@ public class OpenTasksActivity extends AppCompatActivity{
                         intent = new Intent(getApplicationContext(), SettingsActivity.class);
                         startActivity(intent);
                         finish();
+
                 }
 
                 /*Intent show_detail = new Intent(view.getContext(), ShowDetailActivity.class);
