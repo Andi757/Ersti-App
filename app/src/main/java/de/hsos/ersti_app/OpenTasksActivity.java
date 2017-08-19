@@ -2,6 +2,7 @@ package de.hsos.ersti_app;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,12 +18,6 @@ import java.lang.reflect.Array;
 public class OpenTasksActivity extends AppCompatActivity{
 
     ListView simpleList;
-    String[] opentasks=new String[]{
-            "Mensa",
-            "Bibliothek",
-            "SL-Gebäude",
-            "SI-Gebäude",
-            "Validierungsautomat"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +26,12 @@ public class OpenTasksActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Resources r = getResources();
+        String[] opentasks = r.getStringArray(R.array.app_names);
+
         simpleList = (ListView) findViewById(R.id.list_view);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.opentasks_list_view,R.id.textView, opentasks);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.textView, opentasks);
         simpleList.setAdapter(adapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -44,15 +42,25 @@ public class OpenTasksActivity extends AppCompatActivity{
 
                 Intent intent = null;
                 switch (position) {
+                    // Mensa
                     case 0:
                         intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                         startActivity(intent);
                         finish();
-                        //break;
-                    case 2:
-                        intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                        break;
+                    // Bibliothek
+                    case 1:
+                        intent = new Intent(getApplicationContext(), DoneTasksActivity.class);
                         startActivity(intent);
                         finish();
+                     // SL-Gebäude
+                     // SI-Gebäude
+                     // Validierungsautomat
+                     // Fitnessstudio
+                     // Bushaltestelle
+                     // AA-Gebäude
+                     // Aula
+                     // Studiensekreteriat
 
                 }
 
