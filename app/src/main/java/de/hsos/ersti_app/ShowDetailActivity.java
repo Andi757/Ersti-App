@@ -11,30 +11,32 @@ import android.widget.Toast;
 
 public class ShowDetailActivity extends AppCompatActivity {
 
+    Intent intent=null;
     Button gps;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String layout = getIntent().getStringExtra("taskID");
         super.onCreate(savedInstanceState);
-        String test = getIntent().getStringExtra("taskID");
-        if (test.equals("mensa")) {
+        if (layout.equals("mensa")) {
             setContentView(R.layout.activity_mensa);
-        }else if(test.equals("bib")){
+        }else if(layout.equals("bib")){
             setContentView(R.layout.activity_bibliothek);
-        }else if(test.equals("sl")){
+        }else if(layout.equals("sl")){
             setContentView(R.layout.activity_sl);
-        }else if(test.equals("si")){
+        }else if(layout.equals("si")){
             setContentView(R.layout.activity_si);
-        }else if(test.equals("val")){
+        }else if(layout.equals("val")){
             setContentView(R.layout.activity_validierungsautomat);
-        }else if(test.equals("fit")){
+        }else if(layout.equals("fit")){
             setContentView(R.layout.activity_fitnessstudio);
-        }else if(test.equals("bus")){
+        }else if(layout.equals("bus")){
             setContentView(R.layout.activity_bushaltestelle);
-        }else if(test.equals("aa")){
+        }else if(layout.equals("aa")){
             setContentView(R.layout.activity_aa);
-        }else if(test.equals("aula")){
+        }else if(layout.equals("aula")){
             setContentView(R.layout.activity_aula);
-        }else if(test.equals("sek")){
+        }else if(layout.equals("sek")){
             setContentView(R.layout.activity_studiensekreteriat);
         }else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
@@ -42,9 +44,51 @@ public class ShowDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-    public void gps(View view){
-        Intent gps = new Intent(this,MapsActivity.class);
-        startActivity(gps);
+    public void mapView(View view){
+        String layout = getIntent().getStringExtra("taskID");
+        if (layout.equals("mensa")) {
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "mensa");
+            startActivity(gps);
+        }else if(layout.equals("bib")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "bib");
+            startActivity(gps);
+        }else if(layout.equals("si")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "si");
+            startActivity(gps);
+        }else if(layout.equals("sl")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "sl");
+            startActivity(gps);
+        }else if(layout.equals("aula")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "aula");
+            startActivity(gps);
+        }else if(layout.equals("bus")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "bus");
+            startActivity(gps);
+        }else if(layout.equals("aa")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "aa");
+            startActivity(gps);
+        }else if(layout.equals("val")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "val");
+            startActivity(gps);
+        }else if(layout.equals("sek")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "sek");
+            startActivity(gps);
+        }else if(layout.equals("fit")){
+            Intent gps = new Intent(this, MapsActivity.class);
+            gps.putExtra("gps", "fit");
+            startActivity(gps);
+        }else {
+            Toast.makeText(this, "No extra for GPS.", Toast.LENGTH_SHORT).show();
+        }
     }
     @Override
     public void onBackPressed() {

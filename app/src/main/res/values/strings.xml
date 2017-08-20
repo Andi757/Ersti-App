@@ -9,7 +9,9 @@
     <string name="title_activity_open_tasks">Aufgaben</string>
     <string name="title_activity_done_tasks">Erledigt</string>
     <string name="title_activity_settings">Einstellungen</string>
+
     <string name="title_activity_show_detail">Detail</string>
+
     <string name="title_activity_mensa">Mensa</string>
     <string name="title_activity_aa">AA-Gebäude</string>
     <string name="title_activity_si">SI-Gebäude</string>
@@ -20,5 +22,6 @@
     <string name="title_activity_bibliothek">Bibliothek</string>
     <string name="title_activity_fitnessstudio">Fitnessstudio</string>
     <string name="title_activity_aula">Aula</string>
+
     <string name="title_activity_maps">Map</string>
 </resources>
