@@ -22,7 +22,6 @@ public class AppActivity extends ListActivity {
         setContentView(R.layout.activity_app);
 
         //TO BE DONE ---------------------------------------------------------------------->
-        ListView lv = (ListView) findViewById(R.id.list_view);
         Button button = (Button) findViewById(R.id.button1);
 
         Context ctx = getApplicationContext();
@@ -32,7 +31,10 @@ public class AppActivity extends ListActivity {
         TypedArray icons = res.obtainTypedArray(R.array.app_icons);
         final String[] uris = res.getStringArray(R.array.app_uris);
 
+        setListAdapter(new ImageAndTextAdapter(ctx, R.layout.app_item, names, icons, uris));
 
+
+        /*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,9 +42,10 @@ public class AppActivity extends ListActivity {
                 String UriString = uris[0].toString();
                 Uri uri = Uri.parse(UriString);
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(browserIntent);*/
+                startActivity(browserIntent);
             }
         });
+
 
         /*
         //TO BE DONE ---------------------------------------------------------------------->
@@ -57,7 +60,6 @@ public class AppActivity extends ListActivity {
         });
         */
 
-        setListAdapter(new ImageAndTextAdapter(ctx, R.layout.app_item, names, icons, uris));
 
     }
 

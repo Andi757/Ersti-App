@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="app_names">
+        <item>Osca</item>
         <item>Mensa</item>
-        <item>Bibliothek</item>
-        <item>SL-Gebäude</item>
-        <item>SI-Gebäude</item>
-        <item>Validierungsautomat</item>
-        <item>Fitnessstudio</item>
-        <item>Bushaltestelle</item>
-        <item>AA-Gebäude</item>
-        <item>Aula</item>
-        <item>Studiensekreteriat</item>
+        <item>Card Reader</item>
+        <item>Gebäudefinder</item>
+        <item>Netcase</item>
     </string-array>
 
     <string-array name="app_uris">

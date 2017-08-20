@@ -16,8 +16,7 @@
         android:layout_height="100dp"
         android:padding="10dp"
         android:textSize="20dp"
-        android:textAlignment="center"
-        android:layout_alignTop="@+id/option_icon"
+        android:gravity="center"
         android:layout_alignBottom="@+id/option_icon"
         android:layout_toEndOf="@+id/option_icon">
     </TextView>
