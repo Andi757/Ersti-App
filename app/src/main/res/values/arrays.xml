@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="app_names">
+        <item>OSCA App</item>
+        <item>Mesna App</item>
+        <item>App</item>
+        <item>App</item>
+        <item>App</item>
+    </string-array>
+    <string-array name="app_tasks">
         <item>Mensa</item>
         <item>Bibliothek</item>
         <item>SL-Gebäude</item>

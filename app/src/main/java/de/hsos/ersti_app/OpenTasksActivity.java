@@ -27,7 +27,7 @@ public class OpenTasksActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
 
         Resources r = getResources();
-        String[] opentasks = r.getStringArray(R.array.app_names);
+        String[] opentasks = r.getStringArray(R.array.app_tasks);
 
         simpleList = (ListView) findViewById(R.id.list_view);
 
@@ -36,37 +36,70 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
-                String value = (String) simpleList.getItemAtPosition(position);
-                Toast.makeText(OpenTasksActivity.this, "" + value, Toast.LENGTH_SHORT).show();
-
                 Intent intent = null;
                 switch (position) {
                     // Mensa
                     case 0:
                         intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "mensa");
                         startActivity(intent);
-                        finish();
                         break;
                     // Bibliothek
                     case 1:
-                        intent = new Intent(getApplicationContext(), DoneTasksActivity.class);
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "bib");
                         startActivity(intent);
-                        finish();
+                        break;
                      // SL-Gebäude
+                    case 2:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "sl");
+                        startActivity(intent);
+                        break;
                      // SI-Gebäude
+                    case 3:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "si");
+                        startActivity(intent);
+                        break;
                      // Validierungsautomat
-                     // Fitnessstudio
+                    case 4:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "val");
+                        startActivity(intent);
+                        break;
+                    // Fitnessstudio
+                    case 5:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "fit");
+                        startActivity(intent);
+                        break;
                      // Bushaltestelle
+                    case 6:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "bus");
+                        startActivity(intent);
+                        break;
                      // AA-Gebäude
+                    case 7:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "aa");
+                        startActivity(intent);
+                        break;
                      // Aula
+                    case 8:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "aula");
+                        startActivity(intent);
+                        break;
                      // Studiensekreteriat
+                    case 9:
+                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                        intent.putExtra("taskID", "sek");
+                        startActivity(intent);
+                        break;
 
                 }
-
-                /*Intent show_detail = new Intent(view.getContext(), ShowDetailActivity.class);
-                startActivity(show_detail);
-                finish();*/
             }}
         );
     }
