@@ -10,7 +10,6 @@
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:name="com.google.android.gms.maps.MapFragment"
-        android:value="@string/google_maps_key"
         android:id="@+id/map"
         android:layout_width="0dp"
         android:layout_height="0dp"
