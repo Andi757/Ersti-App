@@ -20,29 +20,57 @@ public class ShowDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if (layout.equals("mensa")) {
             setContentView(R.layout.activity_mensa);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Mensa");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("bib")){
             setContentView(R.layout.activity_bibliothek);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Bibliothek");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("sl")){
             setContentView(R.layout.activity_sl);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("SL-Gebäude");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("si")){
             setContentView(R.layout.activity_si);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("SI-Gebäude");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("val")){
             setContentView(R.layout.activity_validierungsautomat);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Validierungsautomat");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("fit")){
             setContentView(R.layout.activity_fitnessstudio);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Fitnessstudio");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("bus")){
             setContentView(R.layout.activity_bushaltestelle);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Bushaltestelle");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("aa")){
             setContentView(R.layout.activity_aa);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("AA-Gebäude");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("aula")){
             setContentView(R.layout.activity_aula);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Aula");
+            setSupportActionBar(toolbar);
         }else if(layout.equals("sek")){
             setContentView(R.layout.activity_studiensekreteriat);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Studiensekreteriat");
+            setSupportActionBar(toolbar);
         }else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
         }
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
     public void mapView(View view){
         String layout = getIntent().getStringExtra("taskID");

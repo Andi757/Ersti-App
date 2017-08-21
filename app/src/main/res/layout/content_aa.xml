@@ -10,6 +10,7 @@
 
     <ImageView
         android:id="@+id/imageView"
+        app:title="@string/title_activity_aa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/aa"

@@ -2,6 +2,7 @@ package de.hsos.ersti_app;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -28,6 +29,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        float zoomLevel = 16;
         LatLng mensa = new LatLng(52.28450293, 8.02225113);
         LatLng bus = new LatLng(52.28259298,8.02595794);
         LatLng bib = new LatLng(52.28615684,8.02249789);
@@ -42,34 +44,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if (location.equals("mensa")){
             mMap.addMarker(new MarkerOptions().position(mensa).title("Hier ist die Mensa!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(mensa));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mensa,zoomLevel));
         }else if(location.equals("bib")){
             mMap.addMarker(new MarkerOptions().position(bib).title("Hier ist die Bibliothek!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(bib));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bib,zoomLevel));
         }else if(location.equals("bus")) {
             mMap.addMarker(new MarkerOptions().position(bus).title("Hier ist die Bushaltestelle!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(bus));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bus,zoomLevel));
         }else if(location.equals("si")) {
             mMap.addMarker(new MarkerOptions().position(si).title("Hier ist das SI-Gebäude!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(si));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(si,zoomLevel));
         }else if(location.equals("sl")) {
             mMap.addMarker(new MarkerOptions().position(sl).title("Hier ist Das SL-Gebäude!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(sl));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sl,zoomLevel));
         }else if(location.equals("aa")) {
             mMap.addMarker(new MarkerOptions().position(aa).title("Hier ist AA-Gebäude!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(aa));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(aa,zoomLevel));
         }else if(location.equals("fit")) {
             mMap.addMarker(new MarkerOptions().position(fit).title("Hier ist das Fitnessstudio!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(fit));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fit,zoomLevel));
         }else if(location.equals("val")) {
             mMap.addMarker(new MarkerOptions().position(val).title("Hier ist der Validierungsautomat!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(val));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(val,zoomLevel));
         }else if(location.equals("sek")) {
             mMap.addMarker(new MarkerOptions().position(sek).title("Hier ist das Studiensekreteriat!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(sek));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sek,zoomLevel));
         }else if(location.equals("aula")) {
             mMap.addMarker(new MarkerOptions().position(aula).title("Hier ist die Aula!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(aula));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(aula,zoomLevel));
         }
     }
 }

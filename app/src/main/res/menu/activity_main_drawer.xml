@@ -5,10 +5,10 @@
             android:id="@+id/aufgaben_offen"
             android:icon="@drawable/control_list"
             android:title="@string/title_activity_open_tasks" />
-        <item
+        <!--<item
             android:id="@+id/aufgaben_erledigt"
             android:icon="@drawable/done_list"
-            android:title="@string/title_activity_done_tasks" />
+            android:title="@string/title_activity_done_tasks" />-->
         <item
             android:id="@+id/apps"
             android:icon="@drawable/playstore"
