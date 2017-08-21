@@ -2,13 +2,17 @@
     <string name="app_name">Ersti-App</string>
     <string name="title_activity_main">Ersti-App</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Öffne das Menü</string>
+    <string name="navigation_drawer_close">Schließe das Menü</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Einstellungen</string>
     <string name="title_activity_open_tasks">Aufgaben</string>
     <string name="title_activity_done_tasks">Erledigt</string>
+    <string name="title_activity_apps">Nützliche Apps</string>
     <string name="title_activity_settings">Einstellungen</string>
+    
+    <string name="title_divider_event">Veranstaltung</string>
+    <string name="title_activity_nachtleben">Nachtleben-OS</string>
 
     <string name="title_activity_show_detail">Detail</string>
 
@@ -23,5 +27,13 @@
     <string name="title_activity_fitnessstudio">Fitnessstudio</string>
     <string name="title_activity_aula">Aula</string>
 
+
     <string name="title_activity_maps">Map</string>
+
+
+    <string name="Mensa_content">Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.<br/>
+        Hier bekommst du zwischen <b>11:30 - 14:15 Uhr</b> warmes Essen.<br/>
+        Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen,
+        die <b>Montag bis Donnerstag 9:00 - 12:00 Uhr</b> und am <b>Freitag 9:00 - 16:00 Uhr</b> für dich geöffnet haben.<br/>
+        Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!</string>
 </resources>

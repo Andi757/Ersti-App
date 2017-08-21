@@ -4,31 +4,27 @@
         <item
             android:id="@+id/aufgaben_offen"
             android:icon="@drawable/control_list"
-            android:title="Aufgaben" />
+            android:title="@string/title_activity_open_tasks" />
         <item
             android:id="@+id/aufgaben_erledigt"
             android:icon="@drawable/done_list"
-            android:title="Erledigt" />
+            android:title="@string/title_activity_done_tasks" />
         <item
             android:id="@+id/apps"
             android:icon="@drawable/playstore"
-            android:title="nützliche Apps"/>
+            android:title="@string/title_activity_apps"/>
         <item
             android:id="@+id/einstellungen"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Einstellungen" />
+            android:title="@string/action_settings" />
     </group>
 
-    <item android:title="Veranstaltungen">
+    <item android:title="@string/title_divider_event">
         <menu>
             <item
                 android:id="@+id/nachtleben_os"
                 android:icon="@drawable/champaign"
-                android:title="Nachtleben-OS" />
-            <item
-                android:id="@+id/veranstaltung2"
-                android:icon="@drawable/champaign"
-                android:title="Kneipentour" />
+                android:title="@string/title_activity_nachtleben" />
         </menu>
     </item>
 </menu>

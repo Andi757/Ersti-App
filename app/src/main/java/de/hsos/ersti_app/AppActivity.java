@@ -23,6 +23,7 @@ public class AppActivity extends ListActivity {
 
         //TO BE DONE ---------------------------------------------------------------------->
         Button button = (Button) findViewById(R.id.button1);
+        ListView lv = (ListView) findViewById(R.id.list_view);
 
         Context ctx = getApplicationContext();
         Resources res = ctx.getResources();
@@ -32,6 +33,7 @@ public class AppActivity extends ListActivity {
         final String[] uris = res.getStringArray(R.array.app_uris);
 
         setListAdapter(new ImageAndTextAdapter(ctx, R.layout.app_item, names, icons, uris));
+
 
 
         /*
