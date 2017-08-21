@@ -37,7 +37,28 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
     @Override
     public void handleResult(Result result){
         //Do anything with the Result here --------------------------------------------------->
-
+        switch (result.getText()){
+            case "mensa":
+                break;
+            case "bibliothek":
+                break;
+            case "sl_gebäude":
+                break;
+            case "si_gebäude":
+                break;
+            case "validierungsautomat":
+                break;
+            case "fitnessstudio":
+                break;
+            case "bushaltestelle":
+                break;
+            case "aa-gebäude":
+                break;
+            case "aula":
+                break;
+            case "studiensekritariat":
+                break;
+        }
 
 
         Log.v("handleResult", result.getText());

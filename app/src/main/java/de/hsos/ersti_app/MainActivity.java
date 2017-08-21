@@ -99,10 +99,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.aufgaben_offen) {
             Intent aufgaben_offen = new Intent(this, OpenTasksActivity.class);
             startActivity(aufgaben_offen);
-        } /*else if (id == R.id.aufgaben_erledigt) {
-            Intent aufgaben_erledigt = new Intent(this, DoneTasksActivity.class);
-            startActivity(aufgaben_erledigt);
-        }*/ else if (id == R.id.apps) {
+        } else if (id == R.id.apps) {
             Intent apps = new Intent(this, AppActivity.class);
             startActivity(apps);
         } else if (id == R.id.einstellungen) {

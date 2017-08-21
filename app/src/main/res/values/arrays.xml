@@ -6,6 +6,7 @@
         <item>Card Reader</item>
         <item>Gebäudefinder</item>
         <item>Netcase</item>
+        <item>VOS-Pilot</item>
     </string-array>
     <string-array name="tasks">
         <item>Mensa</item>
@@ -26,6 +27,7 @@
         <item>https://play.google.com/store/apps/details?id=de.lazyheroproductions.campuscardreader</item>
         <item>https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder</item>
         <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
+        <item>https://play.google.com/store/apps/details?id=de.hafas.android.vos</item>
     </string-array>
     <array name="app_icons">
         <item>@drawable/osca</item>

@@ -55,14 +55,14 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = mInflater.inflate(mViewResourceId, null);
-
+/*
         ImageView iv = (ImageView)convertView.findViewById(R.id.option_icon);
         iv.setImageDrawable(mIcons.getDrawable(position));
 
         TextView tv = (TextView)convertView.findViewById(R.id.option_text);
         tv.setText(mStrings[position]);
         tv.setTextColor(Color.parseColor("#000000"));
-
+*/
         return convertView;
     }
 }

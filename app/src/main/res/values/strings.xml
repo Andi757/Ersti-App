@@ -31,6 +31,7 @@
     <string name="title_activity_maps">Map</string>
 
 
+    //Detail descriptions
     <string name="Mensa_content">Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.\n
         Hier bekommst du zwischen <b>11:30 - 14:15 Uhr</b> warmes Essen.\n
         Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen,
