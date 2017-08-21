@@ -2,14 +2,9 @@ package de.hsos.ersti_app;
 
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Browser;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
