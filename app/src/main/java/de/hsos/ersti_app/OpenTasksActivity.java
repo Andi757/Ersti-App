@@ -27,7 +27,7 @@ public class OpenTasksActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
 
         Resources r = getResources();
-        String[] opentasks = r.getStringArray(R.array.app_tasks);
+        String[] opentasks = r.getStringArray(R.array.tasks);
 
         simpleList = (ListView) findViewById(R.id.list_view);
 

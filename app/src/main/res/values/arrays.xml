@@ -7,7 +7,7 @@
         <item>Gebäudefinder</item>
         <item>Netcase</item>
     </string-array>
-    <string-array name="app_tasks">
+    <string-array name="tasks">
         <item>Mensa</item>
         <item>Bibliothek</item>
         <item>SL-Gebäude</item>
