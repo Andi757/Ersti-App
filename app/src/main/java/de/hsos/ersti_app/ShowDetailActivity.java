@@ -24,6 +24,15 @@ public class ShowDetailActivity extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Mensa");
             setSupportActionBar(toolbar);
+            Button mensaButton = (Button) findViewById(R.id.button_downloadMensa);
+            mensaButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck");
+                    Intent mensaDownload = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(mensaDownload);
+                }
+            });
         } else if (layout.equals("bib")) {
             setContentView(R.layout.activity_bibliothek);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -72,16 +81,6 @@ public class ShowDetailActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
         }
-
-        Button mensaButton = (Button) findViewById(R.id.button_downloadMensa);
-        mensaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck");
-                Intent mensaDownload = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(mensaDownload);
-            }
-        });
     }
 
     public void mapView(View view) {

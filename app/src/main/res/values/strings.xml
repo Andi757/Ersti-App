@@ -37,4 +37,37 @@
         Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen,
         die <b>Montag bis Donnerstag 9:00 - 12:00 Uhr</b> und am <b>Freitag 9:00 - 16:00 Uhr</b> für dich geöffnet haben.\n
         Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!</string>
+    <string name="aa_content">
+        Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit Naturwissenschaftlichen schwerpunkt.
+        Auch die Labore sind hier zu finden.
+    </string>
+    <string name="aula_content">
+        In der Aula werden die meisten Grundlagen-Prüfungen geschriben, da heir viele Studenten reinpassen.
+        Ihr werden diesen Raum bestimmt das ein oder andere mal von innen sehen.
+    </string>
+    <string name="si_content">
+        Das Herz der Hochschul-IT: Das SI-Gebäude. Hier findet ihr diverse Rechnerpools und Arbeitsräume.
+    </string>
+    <string name="sl_content">
+        Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern.
+    </string>
+    <string name="sek_content">
+        Hier im Studiensekreteriat könnt ihr alles rund ums Studium und dem Campus in Erfahrung bringen.
+        Einfach mal vorbei schauen, wenn ihr Fragen habt!
+    </string>
+    <string name="val_content">
+        An dem Validierungsautomat können alle Studenten ihre Semestertickets validieren lassen.
+        Ihr solltet das nicht vergessen, da euer Semesterticket auf die Fahrkarte für den ÖPNV ist.
+    </string>
+    <string name="fit_content">
+        Das Fitnessstudio der Hochschule ist für alle studierenden umsonst. 
+        Ihr müsst lediglich einen Gesundheitscheck bei der INAP/O machen.
+    </string>
+    <string name="bus_content">
+        Bushaltestelle: Hochschulen Westerberg. Wer mit dem Bus anfährt, kann sich immer auf die Linie 21 verlassen.
+    </string>
+    <string name="bib_content">
+        Die Bibliothek ist der Rückzugsort für alle, die dabei sind eine Hausarbeit zu schreiben. 
+        Hier findet ihr alles an Literatur.
+    </string>
 </resources>
