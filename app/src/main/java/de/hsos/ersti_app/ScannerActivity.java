@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -28,6 +29,14 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
     protected void onPause() {
         super.onPause();
         mScannerView.stopCamera();
+        //mScannerView.stopCameraPreview();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
+        mScannerView.startCamera();          // Start camera on resume
     }
 
 
@@ -36,8 +45,9 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         //Do anything with the Result here --------------------------------------------------->
         switch (result.getText()){
             case "mensa":
-                openTasksActivity = new OpenTasksActivity();
-                openTasksActivity.setChecked("mensa");
+                //openTasksActivity = new OpenTasksActivity();
+                //openTasksActivity.setChecked("mensa");
+                Toast.makeText(this, "Result: mensa", Toast.LENGTH_SHORT).show();
                 break;
             case "bibliothek":
                 break;
@@ -58,7 +68,6 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
             case "studiensekritariat":
                 break;
         }
-
 
         Log.v("handleResult", result.getText());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
