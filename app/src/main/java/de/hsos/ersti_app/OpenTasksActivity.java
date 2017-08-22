@@ -33,12 +33,11 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
         simpleList.setAdapter(adapter);
+        simpleList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-       /* if(((MyVariable)this.getApplication()).getCheckedList().contains("lol")){
-            simpleList.setItemChecked(0,true);
-        }*/
-
-        //Toast.makeText(this, "Liste:"+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
+        simpleList.setItemChecked(0, true);
+        boolean test = simpleList.isItemChecked(0);
+        Toast.makeText(this, "Check: "+test, Toast.LENGTH_SHORT).show();
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
