@@ -37,8 +37,13 @@ public class ShowDetailActivity extends AppCompatActivity {
                     startActivity(mensaDownload);
                 }
             });
+        } else if (layout.equals("bib")) {
+            setContentView(R.layout.activity_bibliothek);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            toolbar.setTitle("Bibliothek");
+            setSupportActionBar(toolbar);
             //Button um die Bibliothek-Seite zu öffnen
-            /*Button bibButton = (Button) findViewById(R.id.button_openBib);
+            Button bibButton = (Button) findViewById(R.id.button_openBib);
             bibButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -46,12 +51,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                     Intent bibOpen = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(bibOpen);
                 }
-            });*/
-        } else if (layout.equals("bib")) {
-            setContentView(R.layout.activity_bibliothek);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setTitle("Bibliothek");
-            setSupportActionBar(toolbar);
+            });
         } else if (layout.equals("sl")) {
             setContentView(R.layout.activity_sl);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
