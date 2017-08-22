@@ -16,17 +16,14 @@ public class MyVariable extends Application {
 
     private int studentVariable = 0;
     public ArrayList<String> checked = new ArrayList<String>();
-
-
-
-
+    
+    //The Variable will be saved either when you close your app
     public void SaveInt(String key, int value) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(key, value);
         editor.commit();
     }
-
 
     public int LoadInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
