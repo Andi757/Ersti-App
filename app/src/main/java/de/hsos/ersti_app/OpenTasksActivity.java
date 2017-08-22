@@ -100,4 +100,39 @@ public class OpenTasksActivity extends AppCompatActivity{
             }}
         );
     }
+
+    public void setChecked(String name){
+        switch (name){
+            case "mensa":
+                simpleList.setItemChecked(0, true);
+                break;
+            case "bibliothek":
+                simpleList.setItemChecked(1, true);
+                break;
+            case "sl_gebäude":
+                simpleList.setItemChecked(2, true);
+                break;
+            case "si_gebäude":
+                simpleList.setItemChecked(3, true);
+                break;
+            case "validierungsautomat":
+                simpleList.setItemChecked(4, true);
+                break;
+            case "fitnessstudio":
+                simpleList.setItemChecked(5, true);
+                break;
+            case "bushaltestelle":
+                simpleList.setItemChecked(6, true);
+                break;
+            case "aa_gebäude":
+                simpleList.setItemChecked(7, true);
+                break;
+            case "aula":
+                simpleList.setItemChecked(8, true);
+                break;
+            case "studiensekritariat":
+                simpleList.setItemChecked(9, true);
+                break;
+        }
+    }
 }

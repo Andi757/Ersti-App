@@ -1,21 +1,18 @@
 package de.hsos.ersti_app;
 
-import android.content.Intent;
-import android.os.PersistableBundle;
+
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-
 import com.google.zxing.Result;
-
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     private ZXingScannerView mScannerView;
+    public OpenTasksActivity openTasksActivity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +36,8 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         //Do anything with the Result here --------------------------------------------------->
         switch (result.getText()){
             case "mensa":
+                openTasksActivity = new OpenTasksActivity();
+                openTasksActivity.setChecked("mensa");
                 break;
             case "bibliothek":
                 break;
