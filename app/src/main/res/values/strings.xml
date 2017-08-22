@@ -31,6 +31,8 @@
     <string name="title_activity_maps">Map</string>
 
 
+    <string name="string_delete_prefs">Wenn du diesen Button drückst, wird dein ganzer Fortschritt zurückgesetzt</string>
+
     //Detail descriptions
     <string name="Mensa_content">
         Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.\n
