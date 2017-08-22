@@ -74,6 +74,8 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
             case "studiensekretariat":
                 ((MyVariable)this.getApplication()).setStudentVariable("studiensekreteriat");
                 break;
+            default:
+                Toast.makeText(this, "Kein Gültiger QR-Code.", Toast.LENGTH_SHORT).show();
         }
 
         Log.v("handleResult", result.getText());
