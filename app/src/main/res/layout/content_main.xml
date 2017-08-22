@@ -9,7 +9,6 @@
     tools:showIn="@layout/app_bar_main">
 
     <ImageView
-        android:id="@+id/student"
         android:layout_width="127dp"
         android:layout_height="433dp"
         android:src="@drawable/student_0"
