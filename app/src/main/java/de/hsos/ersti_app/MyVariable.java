@@ -19,13 +19,9 @@ public class MyVariable extends Application {
     }
 
     public void setStudentVariable(String name){
-        for(String s: checked){
-            if(s.equals(name)){
-            } else {
-                this.studentVariable += 10;
-                checked.add(name);
-                break;
-              }
+        if(!checked.contains(name)){
+            checked.add(name);
+            studentVariable += 10;
         }
     }
 }
