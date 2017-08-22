@@ -42,21 +42,24 @@
         Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!
     </string>
     <string name="aa_content">
-        Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit Naturwissenschaftlichen schwerpunkt.
+        Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit naturwissenschaftlichem Schwerpunkt.
         Auch die Labore sind hier zu finden.
     </string>
     <string name="aula_content">
-        In der Aula werden die meisten Grundlagen-Prüfungen geschriben, da heir viele Studenten reinpassen.
-        Ihr werden diesen Raum bestimmt das ein oder andere mal von innen sehen.
+        In der Aula werden die meisten Grundlagen-Prüfungen geschrieben, da hier viele Studenten unterkommen.
+        Ihr werden diesen Raum bestimmt das eine oder andere Mal von innen sehen.
     </string>
     <string name="si_content">
-        Das Herz der Hochschul-IT: Das SI-Gebäude. Hier findet ihr diverse Rechnerpools und Arbeitsräume.
+        Das Herz der Hochschul-IT: Das SI-Gebäude.\n
+        Hier findest du unzählige Rechnerräume mit den verschiedensten Betriebssystemen, sodass für
+        Jedermann gesorgt ist.
     </string>
     <string name="sl_content">
         Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern.\n
         In jedem Vorlesungsraum steht ein Rechner, den alle benutzen dürfen, und mindestens ein Beamer.\n
         Außerhalb der Vorlesungsräume findest du genügend Sitz- und Liegemöglichkeiten für dein Selbstudium.\n
-        Im obersten Stock ist außerdem einen Raum, der nur dafür konzipiert wurde.
+        Im obersten Stock ist außerdem ein Raum, der nur dafür konzipiert wurde, dass studierende
+        Eltern mit ihren Kindern dort ihre Freizeit verbringen können.
     </string>
     <string name="sek_content">
         Hier im Studierendensekreteriat kannst du Alles rund ums Studium und dem Campus in Erfahrung bringen.\n
