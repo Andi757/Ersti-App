@@ -41,8 +41,8 @@ public class OpenTasksActivity extends AppCompatActivity{
         simpleList.setItemChecked(0, true);
         boolean test = simpleList.isItemChecked(0);
         if (test==true){
-            CheckedTextView test2 = (CheckedTextView)findViewById(R.id.tasksText);
-            test2.setCheckMarkDrawable(checked);
+            //CheckedTextView test2 = (CheckedTextView)findViewById(R.id.tasksText);
+            //test2.setCheckMarkDrawable(checked);
         }
         Toast.makeText(this, "Check: "+test, Toast.LENGTH_SHORT).show();
 
@@ -52,7 +52,6 @@ public class OpenTasksActivity extends AppCompatActivity{
                 switch (position) {
                     // Mensa
                     case 0:
-                        simpleList.setItemChecked(0,false);
                         intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                         intent.putExtra("taskID", "mensa");
                         startActivity(intent);
@@ -117,8 +116,6 @@ public class OpenTasksActivity extends AppCompatActivity{
     }
     @Override
     public void onResume(){
-        boolean test = simpleList.isItemChecked(0);
-        Toast.makeText(this, "Check: "+test, Toast.LENGTH_SHORT).show();
         super.onResume();
     }
     public void setChecked(String name){
