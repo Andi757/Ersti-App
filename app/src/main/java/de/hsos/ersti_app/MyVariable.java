@@ -3,6 +3,7 @@ package de.hsos.ersti_app;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,6 +46,7 @@ public class MyVariable extends Application {
         if(checked.contains(name)){
             return 1;
         }else {
+            Toast.makeText(this, ""+checked, Toast.LENGTH_SHORT).show();
             return 0;
         }
     }

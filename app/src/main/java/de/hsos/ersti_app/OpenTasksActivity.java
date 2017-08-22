@@ -35,7 +35,8 @@ public class OpenTasksActivity extends AppCompatActivity{
             simpleList.setItemChecked(0, true);
             Toast.makeText(this, "Pref loaded.", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "No pref loaded.", Toast.LENGTH_SHORT).show();
+            int test=((MyVariable)this.getApplication()).getListItem("mensa");
+            Toast.makeText(this, "No pref loaded."+test, Toast.LENGTH_SHORT).show();
         }
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
