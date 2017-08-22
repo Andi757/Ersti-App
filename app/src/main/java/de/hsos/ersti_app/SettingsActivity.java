@@ -17,13 +17,11 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btn1 = (Button) findViewById(R.id.btn1);
+        Button btn1 = (Button) findViewById(R.id.delete_pref);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                System.exit(0);
-                finish();
             }
         });
     }
