@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,7 +24,6 @@ import static de.hsos.ersti_app.R.drawable.si;
 public class OpenTasksActivity extends AppCompatActivity{
 
     ListView simpleList;
-    CheckedTextView test2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,6 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
         simpleList.setAdapter(adapter);
-        simpleList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        simpleList.setItemChecked(4, true);
-        Toast.makeText(this, "Checked: "+simpleList.isItemChecked(4), Toast.LENGTH_SHORT).show();
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -109,44 +107,20 @@ public class OpenTasksActivity extends AppCompatActivity{
                 }
             }}
         );
-    }/*
+    }
     @Override
-    protected void onPostCreate( Bundle savedInstanceState ){
-        simpleList.setItemChecked(4, true);
-       super.onPostCreate(savedInstanceState);
-    }*/
-    public void setChecked(String name){
-        switch (name){
-            case "mensa":
-                simpleList.setItemChecked(0, true);
-                break;
-            case "bibliothek":
-                simpleList.setItemChecked(1, true);
-                break;
-            case "sl_gebäude":
-                simpleList.setItemChecked(2, true);
-                break;
-            case "si_gebäude":
-                simpleList.setItemChecked(3, true);
-                break;
-            case "validierungsautomat":
-                simpleList.setItemChecked(4, true);
-                break;
-            case "fitnessstudio":
-                simpleList.setItemChecked(5, true);
-                break;
-            case "bushaltestelle":
-                simpleList.setItemChecked(6, true);
-                break;
-            case "aa_gebäude":
-                simpleList.setItemChecked(7, true);
-                break;
-            case "aula":
-                simpleList.setItemChecked(8, true);
-                break;
-            case "studiensekritariat":
-                simpleList.setItemChecked(9, true);
-                break;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_done) {
+            Intent intent = new Intent(getApplicationContext(), DoneTasksActivity.class);
+            startActivity(intent);
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 }

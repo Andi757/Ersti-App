@@ -40,6 +40,10 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".DoneTasksActivity"
+            android:label="@string/title_activity_done_tasks"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".ShowDetailActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".AppActivity" />
