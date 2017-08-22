@@ -12,6 +12,6 @@
         android:layout_gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
         android:textColor="#000"
-        android:layout_weight="0.03" />
+        android:layout_weight="0.06" />
 
 </LinearLayout>

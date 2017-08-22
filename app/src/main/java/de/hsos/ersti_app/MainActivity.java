@@ -3,12 +3,7 @@ package de.hsos.ersti_app;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,18 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.zxing.Result;
-
-import java.net.URL;
-
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ZXingScannerView.ResultHandler {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ZXingScannerView mScannerView;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -117,28 +105,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public void handleResult(Result result) {
-        //Do anything with the Result here --------------------------------------------------->
-        Log.v("handleResult", result.getText());
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Scan Ergebnis");
-        builder.setMessage(result.getText());
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
 
-    public void onClickQR(){
-        mScannerView = new ZXingScannerView(this);
-        setContentView(mScannerView);
-        mScannerView.setResultHandler(this);
-        mScannerView.startCamera();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-//        mScannerView.stopCamera();                <--Die Zeile verurscht crash
-    }
 
 }

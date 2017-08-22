@@ -25,14 +25,13 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
 
     private int mViewResourceId;
 
-    public ImageAndTextAdapter(Context ctx, int viewResourceId,String[] names, TypedArray icons, String[] uris) {
+    public ImageAndTextAdapter(Context ctx, int viewResourceId,String[] names, TypedArray icons) {
         super(ctx, viewResourceId, names);
 
         mInflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         mStrings = names;
         mIcons = icons;
-        mUris = uris;
 
         mViewResourceId = viewResourceId;
     }
@@ -56,10 +55,10 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = mInflater.inflate(mViewResourceId, null);
 /*
-        ImageView iv = (ImageView)convertView.findViewById(R.id.option_icon);
+        ImageView iv = (ImageView)convertView.findViewById(R.id.app_imageView);
         iv.setImageDrawable(mIcons.getDrawable(position));
 
-        TextView tv = (TextView)convertView.findViewById(R.id.option_text);
+        TextView tv = (TextView)convertView.findViewById(R.id.app_textView);
         tv.setText(mStrings[position]);
         tv.setTextColor(Color.parseColor("#000000"));
 */
