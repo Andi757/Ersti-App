@@ -16,11 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static de.hsos.ersti_app.R.drawable.checked;
+import static de.hsos.ersti_app.R.drawable.si;
 
 
 public class OpenTasksActivity extends AppCompatActivity{
 
     ListView simpleList;
+    CheckedTextView test2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +38,8 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
         simpleList.setAdapter(adapter);
-        simpleList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-
-        simpleList.setItemChecked(0, true);
-        boolean test = simpleList.isItemChecked(0);
-        if (test==true){
-            CheckedTextView test2 = (CheckedTextView)findViewById(R.id.tasksText);
-            test2.setCheckMarkDrawable(checked);
-        }
-        Toast.makeText(this, "Check: "+test, Toast.LENGTH_SHORT).show();
+        simpleList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        simpleList.setItemChecked(4, true);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -52,7 +47,6 @@ public class OpenTasksActivity extends AppCompatActivity{
                 switch (position) {
                     // Mensa
                     case 0:
-                        simpleList.setItemChecked(0,false);
                         intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                         intent.putExtra("taskID", "mensa");
                         startActivity(intent);
@@ -114,13 +108,12 @@ public class OpenTasksActivity extends AppCompatActivity{
                 }
             }}
         );
-    }
+    }/*
     @Override
-    public void onResume(){
-        boolean test = simpleList.isItemChecked(0);
-        Toast.makeText(this, "Check: "+test, Toast.LENGTH_SHORT).show();
-        super.onResume();
-    }
+    protected void onPostCreate( Bundle savedInstanceState ){
+        simpleList.setItemChecked(4, true);
+       super.onPostCreate(savedInstanceState);
+    }*/
     public void setChecked(String name){
         switch (name){
             case "mensa":

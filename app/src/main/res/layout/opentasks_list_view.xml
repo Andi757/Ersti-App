@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     android:weightSum="1">
 
-    <CheckedTextView
+    <TextView
         android:id="@+id/tasksText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
-        android:textColor="#000"
-        android:layout_weight="0.03"
-        android:checked="false"/>
+        android:textColor="@drawable/menu_item_text_selector"
+        android:layout_weight="0.03"/>
 
 </LinearLayout>
