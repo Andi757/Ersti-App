@@ -72,11 +72,33 @@ public class ShowDetailActivity extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Fitnessstudio");
             setSupportActionBar(toolbar);
+
+            //Button um IN-MOVE Seite zu öffnen
+            Button inMove = (Button) findViewById(R.id.button_openIN_MOVE);
+            inMove.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    uri = Uri.parse("https://www.inapo.hs-osnabrueck.de/de/weitere-angebote/in-move/");
+                    Intent InMoveOpen = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(InMoveOpen);
+                }
+            });
         } else if (layout.equals("bus")) {
             setContentView(R.layout.activity_bushaltestelle);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Bushaltestelle");
             setSupportActionBar(toolbar);
+
+            //Button um VOS-Pilot zu downloaden
+            Button vos_download = (Button) findViewById(R.id.button_downloadVOS);
+            vos_download.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    uri = Uri.parse("https://play.google.com/store/apps/details?id=de.hafas.android.vos");
+                    Intent bibOpen = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(bibOpen);
+                }
+            });
         } else if (layout.equals("aa")) {
             setContentView(R.layout.activity_aa);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

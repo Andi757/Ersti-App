@@ -76,14 +76,18 @@
         Bestätigung erhalten hast.
     </string>
     <string name="fit_content">
-        Das Fitnessstudio der Hochschule ist für alle studierenden umsonst. 
-        Ihr müsst lediglich einen Gesundheitscheck bei der INAP/O machen.
+        Das Fitnessstudio <b>IN-MOVE</b> der Hochschule ist für alle Studierenden <b>umsonst</b>.\n
+        Du musst lediglich einen Gesundheitscheck bei der INAP/O machen.\n
+        Auf der IN-MOVE Seite erfährst du die Öffnungszeiten und alle anderen wichtigen Informationen.\n
+        Schau doch mal rein!
     </string>
     <string name="bus_content">
         Bushaltestelle: Hochschulen Westerberg.\n
-        Die Buslinien 21 und 22 bringen dich bringen dich (bis 18:00 Uhr) alle 10 min bis zum Bahnhof.
-        Danach nur jede halbe Stunde.
-        Möchtest du in die City, kannst du auch am Neumarkt austeigen.
+        Die Buslinien 21 und 22 bringen dich (bis <b>18:00 Uhr</b>) alle 10 min bis zum Bahnhof.
+        Danach nur jede halbe Stunde.\n
+        Möchtest du in die City, kannst du auch am Neumarkt aussteigen.\n
+        Mit dem <b>VOS-Pilot</b> kannst du dir deine <b>eigene Route</b> zusammenstellen! Lade sie dir jetzt
+        herunter!
     </string>
     <string name="bib_content">
         Die Bibliothek der Hochschule Osnabrück ist das neuste Gebäude am Westerberg und stellt eine unglaubliche
