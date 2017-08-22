@@ -64,10 +64,9 @@ public class MyVariable extends Application {
         }
     }
     public int getListItem(String name){
-        if(checked.contains(name)){
+        if(getCheckedList().contains(name)){
             return 1;
         }else {
-            Toast.makeText(this, ""+checked, Toast.LENGTH_SHORT).show();
             return 0;
         }
     }
