@@ -13,7 +13,6 @@ public class MyVariable extends Application {
     private int studentVariable = 0;
     public ArrayList<String> checked = new ArrayList<String>();
 
-
     public int getStudentVariable(){
         return studentVariable;
     }
