@@ -14,11 +14,11 @@ public class MyVariable extends Application {
     public ArrayList<String> checked = new ArrayList<String>();
 
 
-    public int getStudentVarible(){
+    public int getStudentVariable(){
         return studentVariable;
     }
 
-    public void setStudentVarible(String name){
+    public void setStudentVariable(String name){
         for(String s: checked){
             if(s.equals(name)){
                 this.studentVariable += 10;
