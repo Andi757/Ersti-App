@@ -32,11 +32,13 @@
 
 
     //Detail descriptions
-    <string name="Mensa_content">Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.\n
+    <string name="Mensa_content">
+        Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.\n
         Hier bekommst du zwischen <b>11:30 - 14:15 Uhr</b> warmes Essen.\n
         Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen,
         die <b>Montag bis Donnerstag 9:00 - 12:00 Uhr</b> und am <b>Freitag 9:00 - 16:00 Uhr</b> für dich geöffnet haben.\n
-        Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!</string>
+        Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!
+    </string>
     <string name="aa_content">
         Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit Naturwissenschaftlichen schwerpunkt.
         Auch die Labore sind hier zu finden.

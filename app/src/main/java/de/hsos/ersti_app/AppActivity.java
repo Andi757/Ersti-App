@@ -2,11 +2,13 @@ package de.hsos.ersti_app;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -21,6 +23,7 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Nützliche Apps");
         setSupportActionBar(toolbar);
 
         Resources res = getResources();
@@ -28,8 +31,7 @@ public class AppActivity extends AppCompatActivity {
 
         appList = (ListView) findViewById(R.id.app_listView);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.app_listview, R.id.app_textView, apps);
-        appList.setAdapter(adapter);
+        appList.setAdapter(new ArrayAdapter<String>(this, R.layout.app_listview, R.id.app_textView, apps));
 
         appList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -80,7 +82,6 @@ public class AppActivity extends AppCompatActivity {
 
         String[] names = res.getStringArray(R.array.app_names);
         TypedArray icons = res.obtainTypedArray(R.array.app_icons);
-        final String[] uris = res.getStringArray(R.array.app_uris);
 
         setListAdapter(new ImageAndTextAdapter(ctx, R.layout.content_app, names, icons, uris));
         */
@@ -88,6 +89,9 @@ public class AppActivity extends AppCompatActivity {
 
     }
 
+    public void addClassChecked(ListView view, int position){
+
+    }
 
 
 }
