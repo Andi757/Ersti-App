@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,11 +34,11 @@ public class OpenTasksActivity extends AppCompatActivity{
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
         simpleList.setAdapter(adapter);
 
-        if(((MyVariable)this.getApplication()).getCheckedList().contains("lol")){
+       /* if(((MyVariable)this.getApplication()).getCheckedList().contains("lol")){
             simpleList.setItemChecked(0,true);
-        }
+        }*/
 
-        Toast.makeText(this, "Liste:"+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Liste:"+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {

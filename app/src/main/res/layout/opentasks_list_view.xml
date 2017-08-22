@@ -13,7 +13,6 @@
         android:padding="@dimen/activity_horizontal_margin"
         android:textColor="#000"
         android:layout_weight="0.03"
-        android:checked="true"
-        android:checkMark="@drawable/checked" />
+        android:checked="false" />
 
 </LinearLayout>
