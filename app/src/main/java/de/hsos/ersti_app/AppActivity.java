@@ -89,9 +89,6 @@ public class AppActivity extends AppCompatActivity {
 
     }
 
-    public void addClassChecked(ListView view, int position){
-
-    }
 
 
 }

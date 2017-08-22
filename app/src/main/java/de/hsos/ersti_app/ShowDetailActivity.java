@@ -14,6 +14,7 @@ public class ShowDetailActivity extends AppCompatActivity {
 
     Intent intent = null;
     Button gps;
+    Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +25,28 @@ public class ShowDetailActivity extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Mensa");
             setSupportActionBar(toolbar);
+
+
+            //Button um die MensaApp zu downloaden
             Button mensaButton = (Button) findViewById(R.id.button_downloadMensa);
             mensaButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck");
+                    uri = Uri.parse("https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck");
                     Intent mensaDownload = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(mensaDownload);
                 }
             });
+            //Button um die Bibliothek-Seite zu öffnen
+            /*Button bibButton = (Button) findViewById(R.id.button_openBib);
+            bibButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    uri = Uri.parse("https://www.bib.hs-osnabrueck.de");
+                    Intent bibOpen = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(bibOpen);
+                }
+            });*/
         } else if (layout.equals("bib")) {
             setContentView(R.layout.activity_bibliothek);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
