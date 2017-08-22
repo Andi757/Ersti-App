@@ -23,6 +23,7 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Nützliche Apps");
         setSupportActionBar(toolbar);
 
         Resources res = getResources();
@@ -30,16 +31,7 @@ public class AppActivity extends AppCompatActivity {
 
         appList = (ListView) findViewById(R.id.app_listView);
 
-        appList.setAdapter(new ArrayAdapter<String>(this, R.layout.app_listview, R.id.app_textView, apps) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View row = super.getView(position, convertView, parent);
-                if(getItem(position).getClass().equals("checked")){
-                    row.setBackgroundColor(Color.RED);
-                }
-                return row;
-            }
-        });
+        appList.setAdapter(new ArrayAdapter<String>(this, R.layout.app_listview, R.id.app_textView, apps));
 
         appList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
