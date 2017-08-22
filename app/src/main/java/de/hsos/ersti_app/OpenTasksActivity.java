@@ -40,6 +40,7 @@ public class OpenTasksActivity extends AppCompatActivity{
         simpleList.setAdapter(adapter);
         simpleList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         simpleList.setItemChecked(4, true);
+        Toast.makeText(this, "Checked: "+simpleList.isItemChecked(4), Toast.LENGTH_SHORT).show();
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
