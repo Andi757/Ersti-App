@@ -32,6 +32,7 @@
 
 
     <string name="string_delete_prefs">Wenn du diesen Button drückst, wird dein ganzer Fortschritt zurückgesetzt</string>
+    <string name="deleted_prefs">Dein Fortschritt wurde zurückgesetzt</string>
 
     //Detail descriptions
     <string name="Mensa_content">
