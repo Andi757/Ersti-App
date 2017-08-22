@@ -10,12 +10,10 @@ import java.util.ArrayList;
 /**
  * Created by Andrej on 22.08.2017.
  */
-
 public class MyVariable extends Application {
 
     private int studentVariable = 0;
     public ArrayList<String> checked = new ArrayList<String>();
-
 
     //The Variable will be saved either when you close your app
     public void SaveInt(String key, int value) {
@@ -24,12 +22,12 @@ public class MyVariable extends Application {
         editor.putInt(key, value);
         editor.commit();
     }
-
     public int LoadInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         int savedValue = sharedPreferences.getInt("key", 0);
         return savedValue;
     }
+
 
     public void DeleteInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
