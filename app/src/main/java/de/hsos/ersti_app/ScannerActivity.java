@@ -46,26 +46,33 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         switch (result.getText()){
             case "mensa":
                 ((MyVariable)this.getApplication()).setStudentVariable("mensa");
-                //openTasksActivity = new OpenTasksActivity();
-                //openTasksActivity.setChecked("mensa");
                 break;
             case "bibliothek":
+                ((MyVariable)this.getApplication()).setStudentVariable("bibliothek");
                 break;
-            case "sl_gebäude":
+            case "sl-gebäude":
+                ((MyVariable)this.getApplication()).setStudentVariable("sl-gebäude");
                 break;
-            case "si_gebäude":
+            case "si-gebäude":
+                ((MyVariable)this.getApplication()).setStudentVariable("si-gebäude");
                 break;
             case "validierungsautomat":
+                ((MyVariable)this.getApplication()).setStudentVariable("validierungsautmoat");
                 break;
             case "fitnessstudio":
+                ((MyVariable)this.getApplication()).setStudentVariable("fitnessstudio");
                 break;
             case "bushaltestelle":
+                ((MyVariable)this.getApplication()).setStudentVariable("bushaltestelle");
                 break;
             case "aa-gebäude":
+                ((MyVariable)this.getApplication()).setStudentVariable("aa-gebäude");
                 break;
             case "aula":
+                ((MyVariable)this.getApplication()).setStudentVariable("aula");
                 break;
-            case "studiensekritariat":
+            case "studiensekretariat":
+                ((MyVariable)this.getApplication()).setStudentVariable("studiensekreteriat");
                 break;
         }
 
