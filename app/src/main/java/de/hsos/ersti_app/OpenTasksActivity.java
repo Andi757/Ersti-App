@@ -33,6 +33,10 @@ public class OpenTasksActivity extends AppCompatActivity{
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
         simpleList.setAdapter(adapter);
 
+        if(((MyVariable)this.getApplication()).getCheckedList().contains("lol")){
+            simpleList.setItemChecked(0,true);
+        }
+
         Toast.makeText(this, "Liste:"+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
