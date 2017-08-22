@@ -60,8 +60,10 @@
         Einfach mal vorbei schauen, wenn ihr Fragen habt!
     </string>
     <string name="val_content">
-        An dem Validierungsautomat können alle Studenten ihre Semestertickets validieren lassen.
-        Ihr solltet das nicht vergessen, da euer Semesterticket auf die Fahrkarte für den ÖPNV ist.
+        An dem Validierungsautomaten kannst du dein Semesterticket validieren lassen.
+        Dazu musst du einfach nur deine Karte mit der richtigen Seite hineinstecken.\n
+        Denk dran, dass du erst validieren kannst, wenn du deinen Semesterbeitrag bezahlt und eine
+        Bestätigung erhalten hast.
     </string>
     <string name="fit_content">
         Das Fitnessstudio der Hochschule ist für alle studierenden umsonst. 
