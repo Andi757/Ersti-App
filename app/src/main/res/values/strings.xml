@@ -53,11 +53,12 @@
         Das Herz der Hochschul-IT: Das SI-Gebäude. Hier findet ihr diverse Rechnerpools und Arbeitsräume.
     </string>
     <string name="sl_content">
-        Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern.
+        Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern.\n
+        In jedem Vorl
     </string>
     <string name="sek_content">
-        Hier im Studiensekreteriat könnt ihr alles rund ums Studium und dem Campus in Erfahrung bringen.
-        Einfach mal vorbei schauen, wenn ihr Fragen habt!
+        Hier im Studierendensekreteriat kannst du Alles rund ums Studium und dem Campus in Erfahrung bringen.\n
+        Einfach mal vorbeischauen, wenn du Fragen hast!
     </string>
     <string name="val_content">
         An dem Validierungsautomaten kannst du dein Semesterticket validieren lassen.
