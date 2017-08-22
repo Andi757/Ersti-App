@@ -1,6 +1,5 @@
 package de.hsos.ersti_app;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -12,7 +11,6 @@ import java.util.ArrayList;
  */
 
 public class MyVariable extends Application {
-
 
     private int studentVariable = 0;
     public ArrayList<String> checked = new ArrayList<String>();
@@ -30,6 +28,7 @@ public class MyVariable extends Application {
         int savedValue = sharedPreferences.getInt("key", 0);
         return savedValue;
     }
+
 
     public int getStudentVariable(){
         return LoadInt();

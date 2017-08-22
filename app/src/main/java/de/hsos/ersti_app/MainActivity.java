@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity
             testView.setImageResource(R.drawable.student_0);
             TextView testText = (TextView)findViewById(R.id.studentText);
             testText.setText("0% Fortschritt - du hast noch viel vor dir!");
+            Toast.makeText(this, "OnCreate"+fortschritt, Toast.LENGTH_SHORT).show();
         }else if(fortschritt==10) {
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_10);
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity
             testView.setImageResource(R.drawable.student_0);
             TextView testText = (TextView)findViewById(R.id.studentText);
             testText.setText("0% Fortschritt - du hast noch viel vor dir!");
+            Toast.makeText(this, "OnResume-"+fortschritt, Toast.LENGTH_SHORT).show();
         }else if(fortschritt==10) {
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_10);

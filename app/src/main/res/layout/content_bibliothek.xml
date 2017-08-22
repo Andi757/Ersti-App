@@ -40,6 +40,16 @@
         tools:layout_constraintLeft_creator="1" />
 
     <Button
+        android:id="@+id/button_openBib"
+        android:text="Bib Seite"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView"
+        android:layout_marginLeft="19dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <Button
         android:id="@+id/button_mapsBib"
         android:onClick="mapView"
         android:text="Karte"
