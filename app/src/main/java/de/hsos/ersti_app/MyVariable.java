@@ -41,4 +41,11 @@ public class MyVariable extends Application {
             SaveInt("key", studentVariable);
         }
     }
+    public int getListItem(String name){
+        if(checked.contains(name)){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
 }

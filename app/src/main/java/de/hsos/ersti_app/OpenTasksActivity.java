@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.Toast;
 
 
 public class OpenTasksActivity extends AppCompatActivity{
@@ -30,6 +30,13 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.textView, opentasks);
         simpleList.setAdapter(adapter);
+
+        if ((((MyVariable)this.getApplication()).getListItem("mensa"))==1){
+            simpleList.setItemChecked(0, true);
+            Toast.makeText(this, "Pref loaded.", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "No pref loaded.", Toast.LENGTH_SHORT).show();
+        }
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -95,7 +102,6 @@ public class OpenTasksActivity extends AppCompatActivity{
                         intent.putExtra("taskID", "sek");
                         startActivity(intent);
                         break;
-
                 }
             }}
         );

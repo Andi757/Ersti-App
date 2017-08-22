@@ -163,8 +163,6 @@ public class MainActivity extends AppCompatActivity
             Intent www_nachtleben = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(www_nachtleben);
         }
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
