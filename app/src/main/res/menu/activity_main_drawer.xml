@@ -12,7 +12,7 @@
         <item
             android:id="@+id/einstellungen"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/action_settings" />
+            android:title="@string/title_activity_settings" />
     </group>
 
     <item android:title="@string/title_divider_event">
