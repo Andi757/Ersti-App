@@ -6,11 +6,12 @@
 
     android:weightSum="1">
 
-    <TextView
+    <CheckedTextView
         android:id="@+id/tasksText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:checkable="true"
         android:padding="@dimen/activity_horizontal_margin"
         android:textColor="@drawable/menu_item_text_selector"
         android:layout_weight="0.03"/>
