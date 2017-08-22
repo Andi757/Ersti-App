@@ -18,12 +18,12 @@ public class MyVariable extends Application {
     public Set<String> checked = new HashSet<String>();
 
     //The Variable will be saved either when you close your app
-    public void SaveInt(String key, int value, String list, Set set) {
+    public void SaveVariables(String key, int value, String list, Set set) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(key, value);
         editor.putStringSet(list, set);
-        editor.commit();
+        editor.apply();
     }
     public int LoadInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -52,11 +52,15 @@ public class MyVariable extends Application {
         return LoadInt();
     }
 
+    public Set getCheckedList(){
+        return LoadSet();
+    }
+
     public void setStudentVariable(String name){
         if(!checked.contains(name)){
             checked.add(name);
             studentVariable += 10;
-            SaveInt("key", studentVariable,"list", checked);
+            SaveVariables("key", studentVariable,"list", checked);
         }
     }
     public int getListItem(String name){
