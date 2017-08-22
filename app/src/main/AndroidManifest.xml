@@ -36,10 +36,6 @@
             android:label="@string/title_activity_open_tasks"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".DoneTasksActivity"
-            android:label="@string/title_activity_done_tasks"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" />

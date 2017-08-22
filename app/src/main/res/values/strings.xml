@@ -5,6 +5,7 @@
     <string name="navigation_drawer_open">Öffne das Menü</string>
     <string name="navigation_drawer_close">Schließe das Menü</string>
 
+    //SlideBar -------------------------------------------------------------------------------------
     <string name="title_activity_open_tasks">Aufgaben</string>
     <string name="title_activity_done_tasks">Erledigt</string>
     <string name="title_activity_apps">Nützliche Apps</string>
@@ -14,7 +15,9 @@
     <string name="title_activity_nachtleben">Nachtleben-OS</string>
 
     <string name="title_activity_show_detail">Detail</string>
+    <string name="title_activity_maps">Map</string>
 
+    //Aufgaben -------------------------------------------------------------------------------------
     <string name="title_activity_mensa">Mensa</string>
     <string name="title_activity_aa">AA-Gebäude</string>
     <string name="title_activity_si">SI-Gebäude</string>
@@ -26,11 +29,11 @@
     <string name="title_activity_fitnessstudio">Fitnessstudio</string>
     <string name="title_activity_aula">Aula</string>
 
-
-    <string name="title_activity_maps">Map</string>
-
     //Einstellungen --------------------------------------------------------------------------------
-    <string name="string_delete_prefs">Wenn du diesen Button drückst, wird dein ganzer Fortschritt zurückgesetzt</string>
+    <string name="string_delete_prefs">Wenn du diesen Button drückst,
+        wird dein ganzer Fortschritt zurückgesetzt
+    </string>
+
     <string name="deleted_prefs">Dein Fortschritt wurde zurückgesetzt</string>
 
     //Detail descriptions --------------------------------------------------------------------------
