@@ -12,12 +12,10 @@ import java.util.Set;
 /**
  * Created by Andrej on 22.08.2017.
  */
-
 public class MyVariable extends Application {
 
     private int studentVariable = 0;
     public Set<String> checked = new HashSet<String>();
-
 
     //The Variable will be saved either when you close your app
     public void SaveInt(String key, int value, String list, Set set) {
@@ -27,12 +25,12 @@ public class MyVariable extends Application {
         editor.putStringSet(list, set);
         editor.commit();
     }
-
     public int LoadInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         int savedValue = sharedPreferences.getInt("key", 0);
         return savedValue;
     }
+
 
     public Set LoadSet(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -40,6 +38,7 @@ public class MyVariable extends Application {
         Set<String> fetch = sharedPreferences.getStringSet("list", null);
         return fetch;
     }
+
 
     public void DeleteInt(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
