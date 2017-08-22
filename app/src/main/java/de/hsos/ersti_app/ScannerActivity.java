@@ -45,9 +45,9 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         //Do anything with the Result here --------------------------------------------------->
         switch (result.getText()){
             case "mensa":
+                ((MyVariable)this.getApplication()).setStudentVariable("mensa");
                 //openTasksActivity = new OpenTasksActivity();
                 //openTasksActivity.setChecked("mensa");
-                Toast.makeText(this, "Result: mensa", Toast.LENGTH_SHORT).show();
                 break;
             case "bibliothek":
                 break;
@@ -75,5 +75,6 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         builder.setMessage(result.getText());
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+        finish();
     }
 }
