@@ -18,7 +18,7 @@ public class MyVariable extends Application {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         if(sharedPreferences.getAll() == null){
             Set<String> checked = new HashSet<String>();
-            editor.putStringSet("list", checked);
+            editor.putStringSet("checked", checked);
             editor.commit();
         }
     }
@@ -37,7 +37,7 @@ public class MyVariable extends Application {
     public Set LoadSet(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        Set<String> fetch = sharedPreferences.getStringSet("list", null);
+        Set<String> fetch = sharedPreferences.getStringSet("checked", null);
         return fetch;
     }
 
