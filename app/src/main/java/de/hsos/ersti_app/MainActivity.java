@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Set;
+
 import static de.hsos.ersti_app.R.id.image;
 
 public class MainActivity extends AppCompatActivity
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onResume(){
         int fortschritt = ((MyVariable)this.getApplication()).getListNum();
+        Set<String> set = ((MyVariable)this.getApplication()).getCheckedList();
+        Toast.makeText(getApplicationContext(), set.toString(), Toast.LENGTH_LONG ).show();
         if (fortschritt==0){
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_0);
