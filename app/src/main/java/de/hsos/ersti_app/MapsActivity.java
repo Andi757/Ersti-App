@@ -59,7 +59,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             setSupportActionBar(toolbar);
         }else if(title.equals("sek")){
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setTitle("Studiensekreteriat");
+            toolbar.setTitle("Studierendensekretariat");
             setSupportActionBar(toolbar);
         }else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
@@ -109,7 +109,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.addMarker(new MarkerOptions().position(val).title("Hier ist der Validierungsautomat!"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(val,zoomLevel));
         }else if(location.equals("sek")) {
-            mMap.addMarker(new MarkerOptions().position(sek).title("Hier ist das Studiensekreteriat!"));
+            mMap.addMarker(new MarkerOptions().position(sek).title("Hier ist das Studierendensekretariat!"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sek,zoomLevel));
         }else if(location.equals("aula")) {
             mMap.addMarker(new MarkerOptions().position(aula).title("Hier ist die Aula!"));
