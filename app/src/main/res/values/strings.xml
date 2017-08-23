@@ -28,75 +28,51 @@
     <string name="title_activity_sl">SL-Gebäude</string>
     <string name="title_activity_validierungsautmat">Validierungsautomat</string>
     <string name="title_activity_bushaltestelle">Bushaltestelle</string>
-    <string name="title_activity_studiensekreteriat">Studiensekretariat</string>
+    <string name="title_activity_studiensekreteriat">Studierendensekretariat</string>
     <string name="title_activity_bibliothek">Bibliothek</string>
     <string name="title_activity_fitnessstudio">Fitnessstudio</string>
     <string name="title_activity_aula">Aula</string>
 
     //Einstellungen --------------------------------------------------------------------------------
     <string name="string_delete_prefs">Wenn du diesen Button drückst,
-        wird dein ganzer Fortschritt zurückgesetzt
+        wird dein ganzer Fortschritt zurückgesetzt!
     </string>
 
     <string name="deleted_prefs">Dein Fortschritt wurde zurückgesetzt</string>
 
     //Detail descriptions --------------------------------------------------------------------------
     <string name="Mensa_content">
-        Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast.\n
-        Hier bekommst du zwischen <b>11:30 - 14:15 Uhr</b> warmes Essen.\n
-        Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen,
-        die <b>Montag bis Donnerstag 9:00 - 12:00 Uhr</b> und am <b>Freitag 9:00 - 16:00 Uhr</b> für dich geöffnet haben.\n
-        Um herauszufinden, was es heute zu Essen gibt, lade dir die <b>Mensa-App</b> herunter!
+        Die Mensa ist der Ort, den du aufsuchen solltest, wenn du Hunger hast. Hier bekommst du zwischen <b>11:30 - 14:15 Uhr</b> warmes Essen. Wenn du es in dieser Zeit nicht geschafft hast, kannst du dir auch einen Snack in der <b>Café Lounge</b> holen, die <b>Montag bis Donnerstag 9:00 - 12:00 Uhr</b> und am <b>Freitag 9:00 - 16:00 Uhr</b> für dich geöffnet hat. Um herauszufinden, was es heute zu essen gibt, lade dir die <b>Mensa-App</b> herunter!
     </string>
     <string name="aa_content">
-        Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit naturwissenschaftlichem Schwerpunkt.
-        Auch die Labore sind hier zu finden.
+        Das AA-Gebäude ist der Sammelpunkt für alle Studiengänge mit naturwissenschaftlichem Schwerpunkt. Auch die Labore sind hier zu finden.
     </string>
     <string name="aula_content">
-        Die Aula ist die größte Räumlichkeit der Hochschule.\n
-        Hier werden zu Anfang jedes Semesters die Ersti´s begrüßt.
-        Du wirst diesen Raum bestimmt noch das ein oder andere Mal von innen sehen.
+        Die Aula ist die größte Räumlichkeit der Hochschule. Hier werden zu Anfang jeden Semesters die Erstis begrüßt. Du wirst diesen Raum bestimmt noch das ein oder andere Mal von innen sehen.
     </string>
     <string name="si_content">
-        Das Herz der Hochschul-IT: Das SI-Gebäude.\n
-        Hier findest du unzählige Rechnerräume mit den verschiedensten Betriebssystemen, sodass für
+        Das Herz der Hochschul-IT: Das SI-Gebäude.\nHier findest du unzählige Rechnerräume mit den verschiedensten Betriebssystemen, sodass für
         Jedermann gesorgt ist.
     </string>
     <string name="sl_content">
-        Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern.\n
-        In jedem Vorlesungsraum steht ein Rechner, den alle benutzen dürfen, und mindestens ein Beamer.\n
-        Außerhalb der Vorlesungsräume findest du genügend Sitz- und Liegemöglichkeiten für dein Selbstudium.\n
-        Im obersten Stock ist außerdem ein Raum, der nur dafür konzipiert wurde, dass studierende
-        Eltern mit ihren Kindern dort ihre Freizeit verbringen können.
+        Das SL-Gebäude ist das neuste Vorlesungsgebäude der Hochschule. Hier ist alles hoch modern. In jedem Vorlesungsraum steht ein Rechner, den alle benutzen dürfen, und mindestens ein Beamer.
+        Außerhalb der Vorlesungsräume findest du genügend Sitz- und Liegemöglichkeiten für dein
+        Selbststudium. Im obersten Stock ist außerdem ein Raum, in dem studierende Eltern mit ihren
+        Kindern ihre Freizeit verbringen können.
     </string>
     <string name="sek_content">
-        Hier im Studierendensekreteriat kannst du Alles rund ums Studium und dem Campus in Erfahrung bringen.\n
-        Einfach mal vorbeischauen, wenn du Fragen hast!
+        Hier im Studierendensekretariat kannst du alles rund ums Studium und dem Campus in Erfahrung bringen. Einfach mal vorbeischauen, wenn du Fragen hast!
     </string>
     <string name="val_content">
-        An dem Validierungsautomaten kannst du dein Semesterticket validieren lassen.
-        Dazu musst du einfach nur deine Karte mit der richtigen Seite hineinstecken.\n
-        Denk dran, dass du erst validieren kannst, wenn du deinen Semesterbeitrag bezahlt und eine
-        Bestätigung erhalten hast.
+        An dem Validierungsautomaten kannst du dein Semesterticket validieren lassen. Dazu musst du einfach nur deine Karte mit der richtigen Seite hineinstecken. Denk daran, dass du erst validieren kannst, wenn du deinen Semesterbeitrag bezahlt und eine Bestätigung erhalten hast.
     </string>
     <string name="fit_content">
-        Das Fitnessstudio <b>IN-MOVE</b> der Hochschule ist für alle Studierenden <b>umsonst</b>.\n
-        Du musst lediglich einen Gesundheitscheck bei der INAP/O machen.\n
-        Auf der IN-MOVE Seite erfährst du die Öffnungszeiten und alle anderen wichtigen Informationen.\n
-        Schau doch mal rein!
+        Das Fitnessstudio <b>IN-MOVE</b> der Hochschule ist für alle Studierenden <b>umsonst</b>. Du musst lediglich einen Gesundheitscheck bei der INAP/O machen. Auf der IN-MOVE Seite erfährst du die Öffnungszeiten und alle anderen wichtigen Informationen. Schau doch mal rein!
     </string>
     <string name="bus_content">
-        Bushaltestelle: Hochschulen Westerberg.\n
-        Die Buslinien 21 und 22 bringen dich (bis <b>18:00 Uhr</b>) alle 10 min bis zum Bahnhof.
-        Danach nur jede halbe Stunde.\n
-        Möchtest du in die City, kannst du auch am Neumarkt aussteigen.\n
-        Mit dem <b>VOS-Pilot</b> kannst du dir deine <b>eigene Route</b> zusammenstellen! Lade sie dir jetzt
-        herunter!
+        Bushaltestelle: Hochschulen Westerberg.\nDie Buslinien 21 und 22 bringen dich (bis <b>18:00 Uhr</b>) alle 10 min bis zum Bahnhof. Möchtest du in die City, kannst du auch am Neumarkt aussteigen. Mit dem <b>VOS-Pilot</b> kannst du dir deine <b>eigene Route</b> zusammenstellen! Lade sie dir jetzt herunter!
     </string>
     <string name="bib_content">
-        Die Bibliothek der Hochschule Osnabrück ist das neuste Gebäude am Westerberg und stellt eine unglaubliche
-        Sammlung an Wissen zur Verfügung. Hier gibt es außer den vielen Büchern und Zeitschriften auch Räumlichkeiten,
-        die von den Studenten besonders zur Klausurenphasen genutzt werden.\n
-        Du kannst dir deinen Einzel- oder Gruppenraum auf der Homepage der Bibliothek ganz einfach einen Tag vorher reservieren.
+        Die Bibliothek der Hochschule Osnabrück ist das neuste Gebäude am Westerberg und stellt eine unglaubliche Sammlung an Wissen zur Verfügung. Hier gibt es außer den vielen Büchern und Zeitschriften auch Räumlichkeiten, die von den Studenten besonders in der Klausurenphasen genutzt werden. Du kannst dir deinen Einzel- oder Gruppenraum auf der Homepage der Bibliothek ganz einfach einen Tag vorher reservieren.
     </string>
 </resources>

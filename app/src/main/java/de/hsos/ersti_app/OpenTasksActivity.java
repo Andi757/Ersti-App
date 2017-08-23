@@ -92,7 +92,7 @@ public class OpenTasksActivity extends AppCompatActivity{
                     intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                     intent.putExtra("taskID", "aula");
                     startActivity(intent);
-                }else if(simpleList.getItemAtPosition(position).equals("Studiensekretariat")) {
+                }else if(simpleList.getItemAtPosition(position).equals("Studierendensekretariat")) {
                     intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
                     intent.putExtra("taskID", "sek");
                     startActivity(intent);

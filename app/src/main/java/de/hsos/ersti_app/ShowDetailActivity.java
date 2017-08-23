@@ -115,7 +115,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         } else if (layout.equals("sek")) {
             setContentView(R.layout.activity_studiensekreteriat);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setTitle("Studiensekretariat");
+            toolbar.setTitle("Studierendensekretariat");
             setSupportActionBar(toolbar);
         } else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
