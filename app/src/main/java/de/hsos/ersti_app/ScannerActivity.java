@@ -46,34 +46,34 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         //Do anything with the Result here --------------------------------------------------->
         switch (result.getText()){
             case "mensa":
-                ((MyVariable)this.getApplication()).setStudentVariable("mensa");
+                ((MyVariable)this.getApplication()).setStudentVariable("Mensa");
                 break;
             case "bibliothek":
-                ((MyVariable)this.getApplication()).setStudentVariable("bibliothek");
+                ((MyVariable)this.getApplication()).setStudentVariable("Bibliothek");
                 break;
             case "sl-gebäude":
-                ((MyVariable)this.getApplication()).setStudentVariable("sl-gebäude");
+                ((MyVariable)this.getApplication()).setStudentVariable("SL-Gebäude");
                 break;
             case "si-gebäude":
-                ((MyVariable)this.getApplication()).setStudentVariable("si-gebäude");
+                ((MyVariable)this.getApplication()).setStudentVariable("SI-Gebäude");
                 break;
             case "validierungsautomat":
-                ((MyVariable)this.getApplication()).setStudentVariable("validierungsautmoat");
+                ((MyVariable)this.getApplication()).setStudentVariable("Validierungsautmoat");
                 break;
             case "fitnessstudio":
-                ((MyVariable)this.getApplication()).setStudentVariable("fitnessstudio");
+                ((MyVariable)this.getApplication()).setStudentVariable("Fitnessstudio");
                 break;
             case "bushaltestelle":
-                ((MyVariable)this.getApplication()).setStudentVariable("bushaltestelle");
+                ((MyVariable)this.getApplication()).setStudentVariable("Bushaltestelle");
                 break;
             case "aa-gebäude":
-                ((MyVariable)this.getApplication()).setStudentVariable("aa-gebäude");
+                ((MyVariable)this.getApplication()).setStudentVariable("AA-Gebäude");
                 break;
             case "aula":
-                ((MyVariable)this.getApplication()).setStudentVariable("aula");
+                ((MyVariable)this.getApplication()).setStudentVariable("Aula");
                 break;
             case "studiensekretariat":
-                ((MyVariable)this.getApplication()).setStudentVariable("studiensekreteriat");
+                ((MyVariable)this.getApplication()).setStudentVariable("Studiensekretariat");
                 break;
             default:
                 Toast.makeText(this, "Kein Gültiger QR-Code.", Toast.LENGTH_SHORT).show();

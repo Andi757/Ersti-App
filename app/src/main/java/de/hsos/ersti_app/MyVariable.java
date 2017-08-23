@@ -47,7 +47,6 @@ public class MyVariable extends Application {
         editor.commit();
     }
 
-
     public int getStudentVariable(){
         return LoadInt();
     }
@@ -63,17 +62,7 @@ public class MyVariable extends Application {
             SaveVariables("key", studentVariable,"list", checked);
         }
     }
-    public String[] listToString(){
-        String[] done=new String[9];
-        while (!getCheckedList().isEmpty()){
-            if(getCheckedList().contains("mensa")){
-                done[0]="Mensa";
-            }else if (getCheckedList().contains("bib")){
-                done[1]="Bibliothek";
-            }
-        }
-        return done;
-    }
+
     public int getListItem(String name){
         if(getCheckedList().contains(name)){
             return 1;
