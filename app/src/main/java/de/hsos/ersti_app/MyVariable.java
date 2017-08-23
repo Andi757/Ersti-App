@@ -56,18 +56,18 @@ public class MyVariable extends Application {
     }
 
     public void setStudentVariable(String name){
-        if(!getCheckedList().contains(name)){
-            getCheckedList().add(name);
+        if(!checked.contains(name)){
+            checked.add(name);
             studentVariable += 10;
-            SaveVariables("key", studentVariable,"list", getCheckedList());
+            SaveVariables("key", studentVariable,"list", checked);
         }
     }
 
-    public int getListNum() {
-        int zahl=0;
-        for (int i=0;i<getCheckedList().size();i++){
-            zahl+=10;
-            }
-        return zahl;
+    public int getListItem(String name){
+        if(getCheckedList().contains(name)){
+            return 1;
+        }else {
+            return 0;
         }
     }
+}
