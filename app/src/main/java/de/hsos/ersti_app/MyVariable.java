@@ -10,8 +10,6 @@ import java.util.Set;
 
 public class MyVariable extends Application {
 
-  /*  SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;*/
    public Set<String> checked = new HashSet<String>();
     @Override
     public void onCreate() {
@@ -54,7 +52,6 @@ public class MyVariable extends Application {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         checked.clear();
-        //Set<String> checked = new HashSet<String>();
         editor.putStringSet("list", checked);
         editor.apply();
         editor.commit();
