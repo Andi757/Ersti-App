@@ -19,7 +19,7 @@ public class MyVariable extends Application {
         super.onCreate();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        
+
         if(getCheckedList() != null){
             Set<String> set = getCheckedList();
             for(String str: set){
@@ -53,6 +53,7 @@ public class MyVariable extends Application {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
+        checked.clear();
         //Set<String> checked = new HashSet<String>();
         editor.putStringSet("list", checked);
         editor.apply();
