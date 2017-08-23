@@ -26,10 +26,10 @@ public class MyVariable extends Application {
 
 
     //The Variable will be saved either when you close your app
-    public void SaveVariables(String list, Set set) {
+    public void SaveVariables(String checked, Set set) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putStringSet(list, set);
+        editor.putStringSet(checked, set);
         editor.apply();
     }
 
@@ -47,7 +47,7 @@ public class MyVariable extends Application {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         Set<String> checked = new HashSet<String>();
-        editor.putStringSet("list", checked);
+        editor.putStringSet("checked", checked);
         editor.commit();
     }
 
@@ -58,7 +58,7 @@ public class MyVariable extends Application {
     public void setStudentVariable(String name){
         if(!getCheckedList().contains(name)){
             getCheckedList().add(name);
-            SaveVariables("list", getCheckedList());
+            SaveVariables("checked", getCheckedList());
         }
     }
 
