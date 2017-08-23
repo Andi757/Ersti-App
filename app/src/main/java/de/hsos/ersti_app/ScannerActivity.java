@@ -43,7 +43,6 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
     @Override
     public void handleResult(Result result){
-        //Do anything with the Result here --------------------------------------------------->
         switch (result.getText()){
             case "mensa":
                 ((MyVariable)this.getApplication()).setStudentVariable("Mensa");

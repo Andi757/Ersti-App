@@ -31,11 +31,12 @@ public class MyVariable extends Application {
 
 
     public void DeleteInt(){
-        /*SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove();
-        editor.commit();*/
-        getCheckedList().clear();
+        editor.clear();
+        Set<String> list = new HashSet<String>();
+        editor.putStringSet("list", list);
+        editor.commit();
     }
 
     public Set getCheckedList(){
