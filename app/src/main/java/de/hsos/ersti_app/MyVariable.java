@@ -19,12 +19,18 @@ public class MyVariable extends Application {
         super.onCreate();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        
+        if(getCheckedList() != null){
+            Set<String> set = getCheckedList();
+            for(String str: set){
+                checked.add(str);
+            }
+        }
         if(sharedPreferences == null){
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             editor = sharedPreferences.edit();
-            Set<String> checked = new HashSet<String>();
-            checked.add("sharedprefs==NULL");
-            editor.putStringSet("checked", checked);
+            editor.putStringSet("list", checked);
+            editor.apply();
             editor.commit();
         }
     }
@@ -34,12 +40,12 @@ public class MyVariable extends Application {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putStringSet(list, set);
         editor.apply();
+        editor.commit();
     }
 
     public Set LoadSet(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Set<String> fetch = sharedPreferences.getStringSet("list", null);
+        Set<String> fetch = sharedPreferences.getStringSet("list", checked);
         return fetch;
     }
 
@@ -49,6 +55,7 @@ public class MyVariable extends Application {
         editor.clear();
         //Set<String> checked = new HashSet<String>();
         editor.putStringSet("list", checked);
+        editor.apply();
         editor.commit();
     }
 
@@ -59,7 +66,7 @@ public class MyVariable extends Application {
     public void setStudentVariable(String name){
         if (getCheckedList()==null){
             DeleteInt();
-        }if (!checked.contains(name)){
+        }if (!getCheckedList().contains(name)){
             checked.add(name);
             SaveVariables("list", checked);
         }else {
