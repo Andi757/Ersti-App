@@ -14,13 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -51,7 +47,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onResume(){
-        Toast.makeText(this, "Liste: "+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
         int fortschritt = ((MyVariable)this.getApplication()).getListNum();
         if (fortschritt==0){
             ImageView testView = (ImageView)findViewById(R.id.studentView);
@@ -111,6 +106,7 @@ public class MainActivity extends AppCompatActivity
         }
         super.onResume();
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -120,7 +116,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

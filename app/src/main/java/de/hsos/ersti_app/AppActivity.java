@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
 public class AppActivity extends AppCompatActivity {
 
     ListView appList;
@@ -51,21 +50,25 @@ public class AppActivity extends AppCompatActivity {
                         intent = new Intent (Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                         break;
+                    //Card Reader
                     case 2:
                         uri = Uri.parse("https://play.google.com/store/apps/details?id=de.lazyheroproductions.campuscardreader");
                         intent = new Intent (Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                         break;
+                    //Gebäudefinder
                     case 3:
                         uri = Uri.parse("https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder");
                         intent = new Intent (Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                         break;
+                    //Netcase
                     case 4:
                         uri = Uri.parse("https://play.google.com/store/apps/details?id=de.hsos.netcase.android");
                         intent = new Intent (Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                         break;
+                    //VOS-Pilot
                     case 5:
                         uri = Uri.parse("https://play.google.com/store/apps/details?id=de.hafas.android.vos");
                         intent = new Intent (Intent.ACTION_VIEW, uri);
@@ -74,21 +77,5 @@ public class AppActivity extends AppCompatActivity {
                 }
             }
         });
-        /*
-        //TO BE DONE ---------------------------------------------------------------------->
-
-        Context ctx = getApplicationContext();
-        Resources res = ctx.getResources();
-
-        String[] names = res.getStringArray(R.array.app_names);
-        TypedArray icons = res.obtainTypedArray(R.array.app_icons);
-
-        setListAdapter(new ImageAndTextAdapter(ctx, R.layout.content_app, names, icons, uris));
-        */
-
-
     }
-
-
-
 }

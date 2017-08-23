@@ -37,6 +37,7 @@ public class DoneTasksActivity extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.donetasks_list_view,R.id.doneText, donetasks);
             doneList.setAdapter(adapter);
         }
+
         doneList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = null;

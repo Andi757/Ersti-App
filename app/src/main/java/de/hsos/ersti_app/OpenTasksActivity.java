@@ -11,14 +11,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-
-
 
 public class OpenTasksActivity extends AppCompatActivity{
 
@@ -34,8 +30,6 @@ public class OpenTasksActivity extends AppCompatActivity{
         Resources r = getResources();
         String[] opentasks = r.getStringArray(R.array.tasks);
         List<String> opentaskList = Arrays.asList(opentasks);
-
-
 
         Set<String> donetask = ((MyVariable) this.getApplication()).getCheckedList();
         ArrayList<String> donetaskList = new ArrayList<String>();

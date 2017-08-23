@@ -1,6 +1,5 @@
 package de.hsos.ersti_app;
 
-
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +13,6 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class ScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     private ZXingScannerView mScannerView;
-    public OpenTasksActivity openTasksActivity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,12 +23,10 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         mScannerView.startCamera();
     }
 
-
     @Override
     protected void onPause() {
         super.onPause();
         mScannerView.stopCamera();
-        //mScannerView.stopCameraPreview();
     }
 
     @Override
@@ -39,7 +35,6 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
         mScannerView.startCamera();          // Start camera on resume
     }
-
 
     @Override
     public void handleResult(Result result){

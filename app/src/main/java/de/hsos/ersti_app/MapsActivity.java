@@ -1,20 +1,15 @@
 package de.hsos.ersti_app;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import static de.hsos.ersti_app.R.id.toolbar;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -69,11 +64,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }else {
             Toast.makeText(this, "No Layout loaded.", Toast.LENGTH_SHORT).show();
         }
-
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

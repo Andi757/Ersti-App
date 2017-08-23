@@ -1,6 +1,5 @@
 package de.hsos.ersti_app;
 
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -10,10 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-/**
- * Created by Andrej on 18.08.2017.
- */
 
 public class ImageAndTextAdapter extends ArrayAdapter<String> {
 
@@ -54,14 +49,6 @@ public class ImageAndTextAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = mInflater.inflate(mViewResourceId, null);
-/*
-        ImageView iv = (ImageView)convertView.findViewById(R.id.app_imageView);
-        iv.setImageDrawable(mIcons.getDrawable(position));
-
-        TextView tv = (TextView)convertView.findViewById(R.id.app_textView);
-        tv.setText(mStrings[position]);
-        tv.setTextColor(Color.parseColor("#000000"));
-*/
         return convertView;
     }
 }

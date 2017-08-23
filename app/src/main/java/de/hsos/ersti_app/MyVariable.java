@@ -7,7 +7,6 @@ import android.widget.Toast;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class MyVariable extends Application {
 
    public Set<String> checked = new HashSet<String>();

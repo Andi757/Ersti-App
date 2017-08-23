@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-
 public class ShowDetailActivity extends AppCompatActivity {
 
     Intent intent = null;
@@ -26,7 +25,6 @@ public class ShowDetailActivity extends AppCompatActivity {
             toolbar.setTitle("Mensa");
             setSupportActionBar(toolbar);
 
-
             //Button um die MensaApp zu downloaden
             Button mensaButton = (Button) findViewById(R.id.button_downloadMensa);
             mensaButton.setOnClickListener(new View.OnClickListener() {
@@ -37,11 +35,13 @@ public class ShowDetailActivity extends AppCompatActivity {
                     startActivity(mensaDownload);
                 }
             });
+
         } else if (layout.equals("bib")) {
             setContentView(R.layout.activity_bibliothek);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Bibliothek");
             setSupportActionBar(toolbar);
+
             //Button um die Bibliothek-Seite zu öffnen
             Button bibButton = (Button) findViewById(R.id.button_openBib);
             bibButton.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +52,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                     startActivity(bibOpen);
                 }
             });
+
         } else if (layout.equals("sl")) {
             setContentView(R.layout.activity_sl);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -83,6 +84,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                     startActivity(InMoveOpen);
                 }
             });
+
         } else if (layout.equals("bus")) {
             setContentView(R.layout.activity_bushaltestelle);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -99,6 +101,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                     startActivity(bibOpen);
                 }
             });
+
         } else if (layout.equals("aa")) {
             setContentView(R.layout.activity_aa);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -165,10 +168,4 @@ public class ShowDetailActivity extends AppCompatActivity {
             Toast.makeText(this, "No extra for GPS.", Toast.LENGTH_SHORT).show();
         }
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
 }
