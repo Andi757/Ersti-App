@@ -5,6 +5,10 @@
     <string name="navigation_drawer_open">Öffne das Menü</string>
     <string name="navigation_drawer_close">Schließe das Menü</string>
 
+    <string name="empty_string">Leider hast du noch keine Aufgaben erledigt.
+            Aber du schaffst es noch ganz bestimmt!
+    </string>
+
     //SlideBar -------------------------------------------------------------------------------------
     <string name="title_activity_open_tasks">Aufgaben</string>
     <string name="title_activity_done_tasks">Erledigt</string>

@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Set;
+
 import static de.hsos.ersti_app.R.drawable.checked;
 import static de.hsos.ersti_app.R.drawable.si;
 

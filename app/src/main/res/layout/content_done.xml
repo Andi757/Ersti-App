@@ -8,6 +8,14 @@
     tools:context="de.hsos.ersti_app.DoneTasksActivity"
     tools:showIn="@layout/activity_done_tasks">
 
+    <TextView
+        android:id="@+id/empty_list_view"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="@string/empty_string"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
     <ListView
         android:id="@+id/list_view"
         android:layout_width="368dp"
@@ -17,6 +25,8 @@
         android:listSelector="#0f0"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>
