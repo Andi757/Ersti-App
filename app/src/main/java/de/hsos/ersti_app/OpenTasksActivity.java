@@ -2,9 +2,7 @@ package de.hsos.ersti_app;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,15 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckedTextView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
-import static de.hsos.ersti_app.R.drawable.checked;
-import static de.hsos.ersti_app.R.drawable.si;
 
 
 public class OpenTasksActivity extends AppCompatActivity{
@@ -36,10 +33,37 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         Resources r = getResources();
         String[] opentasks = r.getStringArray(R.array.tasks);
+        List<String> opentaskList = Arrays.asList(opentasks);
+
+
+
+        Set<String> donetask = ((MyVariable) this.getApplication()).getCheckedList();
+        //show array
+        //Toast toast = Toast.makeText(getApplicationContext(), "Donetask:" + donetask.toString(), Toast.LENGTH_LONG);
+        //toast.show();
+
+
+        ArrayList<String> donetaskList = new ArrayList<String>();
+        if(donetask != null){
+            for (String str : donetask){
+                donetaskList.add(str);
+            }
+        }
+
+
+
+        ArrayList<String> task = new ArrayList<String>();
+        if(donetaskList != null){
+            for(String str: opentaskList){
+                if (!donetaskList.contains(str)){
+                    task.add(str);
+                }
+            }
+        }
 
         simpleList = (ListView) findViewById(R.id.list_view);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, opentasks);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.opentasks_list_view,R.id.tasksText, task);
         simpleList.setAdapter(adapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
