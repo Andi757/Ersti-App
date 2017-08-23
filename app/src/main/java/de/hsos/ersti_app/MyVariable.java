@@ -3,39 +3,31 @@ package de.hsos.ersti_app;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 import java.util.HashSet;
 import java.util.Set;
 
 
 public class MyVariable extends Application {
 
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
-    public Set<String> checked=new HashSet<String>();
-
+  /*  SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;*/
+   public Set<String> checked = new HashSet<String>();
     @Override
     public void onCreate() {
 
         super.onCreate();
-        /*if(sharedPreferences.getAll() == null){
-            checked = new HashSet<String>();
-            editor.putStringSet("checked", checked);
-            editor.commit();
-        }*/
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         if(sharedPreferences == null){
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             editor = sharedPreferences.edit();
-            checked = new HashSet<String>();
+            Set<String> checked = new HashSet<String>();
+            checked.add("sharedprefs==NULL");
             editor.putStringSet("checked", checked);
             editor.commit();
         }
-
     }
-
-    //The Variable will be saved either when you close your app
-    /*public void SaveVariables(String checked, Set set) {
-        editor.putStringSet("checked", set);
-        editor.apply();*/
 
     public void SaveVariables(String list, Set set) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -44,17 +36,18 @@ public class MyVariable extends Application {
         editor.apply();
     }
 
-
-
     public Set LoadSet(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         Set<String> fetch = sharedPreferences.getStringSet("list", null);
         return fetch;
     }
 
     public void DeleteInt(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
-        Set<String> checked = new HashSet<String>();
+        //Set<String> checked = new HashSet<String>();
         editor.putStringSet("list", checked);
         editor.commit();
     }
@@ -64,9 +57,13 @@ public class MyVariable extends Application {
     }
 
     public void setStudentVariable(String name){
-        if(!getCheckedList().contains(name)){
-            getCheckedList().add(name);
-            SaveVariables("list", getCheckedList());
+        if (getCheckedList()==null){
+            DeleteInt();
+        }if (!checked.contains(name)){
+            checked.add(name);
+            SaveVariables("list", checked);
+        }else {
+            Toast.makeText(this, "Bereits gescannt!", Toast.LENGTH_SHORT).show();
         }
     }
 

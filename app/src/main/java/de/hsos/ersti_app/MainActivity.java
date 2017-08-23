@@ -54,9 +54,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onResume(){
+        Toast.makeText(this, "Liste: "+((MyVariable)this.getApplication()).getCheckedList(), Toast.LENGTH_SHORT).show();
         int fortschritt = ((MyVariable)this.getApplication()).getListNum();
-        Set<String> set = ((MyVariable)this.getApplication()).getCheckedList();
-        Toast.makeText(getApplicationContext(), set.toString(), Toast.LENGTH_LONG ).show();
         if (fortschritt==0){
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_0);

@@ -57,7 +57,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
                 ((MyVariable)this.getApplication()).setStudentVariable("SI-Gebäude");
                 break;
             case "validierungsautomat":
-                ((MyVariable)this.getApplication()).setStudentVariable("Validierungsautmoat");
+                ((MyVariable)this.getApplication()).setStudentVariable("Validierungsautomat");
                 break;
             case "fitnessstudio":
                 ((MyVariable)this.getApplication()).setStudentVariable("Fitnessstudio");
