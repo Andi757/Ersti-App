@@ -74,6 +74,12 @@ public class AppActivity extends AppCompatActivity {
                         intent = new Intent (Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                         break;
+                    //WG-Gesucht
+                    case 6:
+                        uri = Uri.parse("https://play.google.com/store/apps/details?id=com.wggesucht.android");
+                        intent = new Intent (Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        break;
                 }
             }
         });

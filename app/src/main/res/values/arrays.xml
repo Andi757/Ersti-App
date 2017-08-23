@@ -7,7 +7,19 @@
         <item>Gebäudefinder</item>
         <item>Netcase</item>
         <item>VOS-Pilot</item>
+        <item>WG-Gesucht</item>
     </string-array>
+
+    <string-array name="app_uris">
+        <item>https://play.google.com/store/apps/details?id=de.datenlotsen.campusnet.hsos</item>
+        <item>https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck</item>
+        <item>https://play.google.com/store/apps/details?id=de.lazyheroproductions.campuscardreader</item>
+        <item>https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder</item>
+        <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
+        <item>https://play.google.com/store/apps/details?id=de.hafas.android.vos</item>
+        <item>https://play.google.com/store/apps/details?id=com.wggesucht.android</item>
+    </string-array>
+
     <string-array name="tasks">
         <item>Mensa</item>
         <item>Bibliothek</item>
@@ -20,20 +32,4 @@
         <item>Aula</item>
         <item>Studierendensekretariat</item>
     </string-array>
-
-    <string-array name="app_uris">
-        <item>https://play.google.com/store/apps/details?id=de.datenlotsen.campusnet.hsos</item>
-        <item>https://play.google.com/store/apps/details?id=de.mensaplan.app.android.osnabrueck</item>
-        <item>https://play.google.com/store/apps/details?id=de.lazyheroproductions.campuscardreader</item>
-        <item>https://play.google.com/store/apps/details?id=eu.flasskamp.hsosnabrckgebude_finder</item>
-        <item>https://play.google.com/store/apps/details?id=de.hsos.netcase.android</item>
-        <item>https://play.google.com/store/apps/details?id=de.hafas.android.vos</item>
-    </string-array>
-    <array name="app_icons">
-        <item>@drawable/osca</item>
-        <item>@drawable/mensa</item>
-        <item>@drawable/campus_card</item>
-        <item>@drawable/hs_os</item>
-        <item>@drawable/netcase</item>
-    </array>
 </resources>
