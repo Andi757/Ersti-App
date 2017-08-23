@@ -38,11 +38,6 @@ public class OpenTasksActivity extends AppCompatActivity{
 
 
         Set<String> donetask = ((MyVariable) this.getApplication()).getCheckedList();
-        //show array
-        //Toast toast = Toast.makeText(getApplicationContext(), "Donetask:" + donetask.toString(), Toast.LENGTH_LONG);
-        //toast.show();
-
-
         ArrayList<String> donetaskList = new ArrayList<String>();
         if(donetask != null){
             for (String str : donetask){
