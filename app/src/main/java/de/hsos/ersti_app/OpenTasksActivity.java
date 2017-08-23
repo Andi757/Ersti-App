@@ -50,8 +50,6 @@ public class OpenTasksActivity extends AppCompatActivity{
             }
         }
 
-
-
         ArrayList<String> task = new ArrayList<String>();
         if(donetaskList != null){
             for(String str: opentaskList){
@@ -69,70 +67,49 @@ public class OpenTasksActivity extends AppCompatActivity{
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = null;
-                switch (position) {
-                    // Mensa
-                    case 0:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "mensa");
-                        startActivity(intent);
-                        break;
-                    // Bibliothek
-                    case 1:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "bib");
-                        startActivity(intent);
-                        break;
-                     // SL-Gebäude
-                    case 2:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "sl");
-                        startActivity(intent);
-                        break;
-                     // SI-Gebäude
-                    case 3:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "si");
-                        startActivity(intent);
-                        break;
-                     // Validierungsautomat
-                    case 4:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "val");
-                        startActivity(intent);
-                        break;
-                    // Fitnessstudio
-                    case 5:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "fit");
-                        startActivity(intent);
-                        break;
-                     // Bushaltestelle
-                    case 6:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "bus");
-                        startActivity(intent);
-                        break;
-                     // AA-Gebäude
-                    case 7:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "aa");
-                        startActivity(intent);
-                        break;
-                     // Aula
-                    case 8:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "aula");
-                        startActivity(intent);
-                        break;
-                     // Studiensekreteriat
-                    case 9:
-                        intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
-                        intent.putExtra("taskID", "sek");
-                        startActivity(intent);
-                        break;
+                if (simpleList.getItemAtPosition(position).equals("Mensa")){
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "mensa");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Bibliothek")){
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "bib");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("SL-Gebäude")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "sl");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Bushaltestelle")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "bus");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("SI-Gebäude")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "si");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Validierungsautomat")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "val");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Fitnessstudio")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "fit");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("AA-Gebäude")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "aa");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Aula")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "aula");
+                    startActivity(intent);
+                }else if(simpleList.getItemAtPosition(position).equals("Studiensekretariat")) {
+                    intent = new Intent(getApplicationContext(), ShowDetailActivity.class);
+                    intent.putExtra("taskID", "sek");
+                    startActivity(intent);
                 }
-            }}
-        );
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
