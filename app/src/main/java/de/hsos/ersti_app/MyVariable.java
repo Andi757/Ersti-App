@@ -3,9 +3,6 @@ package de.hsos.ersti_app;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,21 +11,14 @@ import java.util.Set;
  */
 public class MyVariable extends Application {
 
-    private int studentVariable = 0;
     public Set<String> checked = new HashSet<String>();
 
     //The Variable will be saved either when you close your app
-    public void SaveVariables(String key, int value, String list, Set set) {
+    public void SaveVariables(String list, Set set) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(key, value);
         editor.putStringSet(list, set);
         editor.apply();
-    }
-    public int LoadInt(){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        int savedValue = sharedPreferences.getInt("key", 0);
-        return savedValue;
     }
 
 
@@ -41,14 +31,11 @@ public class MyVariable extends Application {
 
 
     public void DeleteInt(){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        /*SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.commit();
-    }
-
-    public int getStudentVariable(){
-        return LoadInt();
+        editor.remove();
+        editor.commit();*/
+        getCheckedList().clear();
     }
 
     public Set getCheckedList(){
@@ -58,15 +45,14 @@ public class MyVariable extends Application {
     public void setStudentVariable(String name){
         if(!getCheckedList().contains(name)){
             getCheckedList().add(name);
-            studentVariable +=10;
-            SaveVariables("key", studentVariable,"list", getCheckedList());
+            SaveVariables("list", getCheckedList());
         }
     }
 
     public int getListNum(){
-        int zahl=0;
-        for (int i=0;i<getCheckedList().size();i++){
-            zahl+=10;
+        int zahl = 0;
+        for (int i = 0; i < getCheckedList().size(); i++){
+            zahl += 10;
         }
         return zahl;
     }

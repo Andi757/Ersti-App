@@ -27,7 +27,7 @@ public class DoneTasksActivity extends AppCompatActivity {
         doneList = (ListView) findViewById(R.id.list_view);
         TextView emptylist = (TextView) findViewById(R.id.empty_list_view);
 
-        if(myset == null){
+        if(myset == null||myset.isEmpty()){
             doneList.setEmptyView(emptylist);
             doneList.setVisibility(View.INVISIBLE);
             Toast toast = Toast.makeText(getApplicationContext(), "Keine Einträge vorhanden.", Toast.LENGTH_LONG);
