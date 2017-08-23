@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import static de.hsos.ersti_app.R.drawable.checked;
@@ -36,6 +37,11 @@ public class OpenTasksActivity extends AppCompatActivity{
 
         Resources r = getResources();
         String[] opentasks = r.getStringArray(R.array.tasks);
+
+        Set<String> myset = ((MyVariable)this.getApplication()).getCheckedList();
+        ArrayList<String> arrayList = new ArrayList<String>();
+        for (String str : myset)
+            arrayList.add(str);
 
         simpleList = (ListView) findViewById(R.id.list_view);
 

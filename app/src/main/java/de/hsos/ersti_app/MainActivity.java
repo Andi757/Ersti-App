@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onResume(){
-        int fortschritt = ((MyVariable)this.getApplication()).getStudentVariable();
+        int fortschritt = ((MyVariable)this.getApplication()).getListNum();
         if (fortschritt==0){
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_0);
@@ -121,28 +121,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }*/
-
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
