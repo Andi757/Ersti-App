@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onResume(){
-        int fortschritt = ((MyVariable)this.getApplication()).getStudentVariable();
+        int fortschritt = ((MyVariable)this.getApplication()).getListNum();
         if (fortschritt==0){
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_0);
