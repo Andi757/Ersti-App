@@ -11,7 +11,7 @@ public class MyVariable extends Application {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-    Set<String> checked;
+    public Set<String> checked=new HashSet<String>();
 
     @Override
     public void onCreate() {
@@ -33,22 +33,29 @@ public class MyVariable extends Application {
     }
 
     //The Variable will be saved either when you close your app
-    public void SaveVariables(String checked, Set set) {
-        editor.putStringSet(checked, set);
+    /*public void SaveVariables(String checked, Set set) {
+        editor.putStringSet("checked", set);
+        editor.apply();*/
+
+    public void SaveVariables(String list, Set set) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putStringSet(list, set);
         editor.apply();
     }
 
 
+
     public Set LoadSet(){
-        Set<String> fetch = sharedPreferences.getStringSet("checked", null);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        Set<String> fetch = sharedPreferences.getStringSet("list", null);
         return fetch;
     }
-
 
     public void DeleteInt(){
         editor.clear();
         Set<String> checked = new HashSet<String>();
-        editor.putStringSet("checked", checked);
+        editor.putStringSet("list", checked);
         editor.commit();
     }
 
@@ -57,12 +64,9 @@ public class MyVariable extends Application {
     }
 
     public void setStudentVariable(String name){
-        if(getCheckedList() == null){
+        if(!getCheckedList().contains(name)){
             getCheckedList().add(name);
-            SaveVariables("checked", getCheckedList());
-        }else if(!getCheckedList().contains(name)){
-            getCheckedList().add(name);
-            SaveVariables("checked", getCheckedList());
+            SaveVariables("list", getCheckedList());
         }
     }
 
