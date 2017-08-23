@@ -11,7 +11,19 @@ import java.util.Set;
  */
 public class MyVariable extends Application {
 
-    public Set<String> checked = new HashSet<String>();
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        if(sharedPreferences.getAll() == null){
+            Set<String> checked = new HashSet<String>();
+            editor.putStringSet("list", checked);
+            editor.commit();
+        }
+    }
+
+
 
     //The Variable will be saved either when you close your app
     public void SaveVariables(String list, Set set) {
@@ -34,8 +46,8 @@ public class MyVariable extends Application {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
-        Set<String> list = new HashSet<String>();
-        editor.putStringSet("list", list);
+        Set<String> checked = new HashSet<String>();
+        editor.putStringSet("list", checked);
         editor.commit();
     }
 
