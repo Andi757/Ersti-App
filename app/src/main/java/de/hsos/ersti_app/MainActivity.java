@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_10);
             TextView testText = (TextView)findViewById(R.id.studentText);
-            testText.setText("10% Fortschritt - der Anfang ist am schwersten!");
+            testText.setText("10% Fortschritt - der Anfang ist am Schwersten!");
         }else if(fortschritt==20) {
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_20);
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_50);
             TextView testText = (TextView)findViewById(R.id.studentText);
-            testText.setText("50% Fortschritt - die hälfte ist geschafft!");
+            testText.setText("50% Fortschritt - die Hälfte ist geschafft!");
         }else if(fortschritt==60) {
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_60);
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_90);
             TextView testText = (TextView)findViewById(R.id.studentText);
-            testText.setText("90% Fortschritt - nur noch ein Ort!");
+            testText.setText("90% Fortschritt - nur noch eine Aufgabe!");
         }else if(fortschritt==100) {
             ImageView testView = (ImageView)findViewById(R.id.studentView);
             testView.setImageResource(R.drawable.student_100);
